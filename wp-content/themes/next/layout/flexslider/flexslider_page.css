@@ -1,0 +1,796 @@
+/*
+ * jQuery FlexSlider v1.8
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+
+/* Browser Resets */
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus  {outline: none;}
+.slides,
+.flex-control-nav,
+.flex-direction-nav {margin: 0; padding: 0; list-style: none;}
+
+/* FlexSlider Necessary Styles
+*********************************/
+.flexslider {margin: 0; padding: 0;}
+.flexslider .slides > li {display: none; -webkit-backface-visibility: hidden;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides #onlyslide {display: block!important; -webkit-backface-visibility: visible!important; float:left; width:100%;} /* Creamos esta clase por si sólo hay 1 diapositiva en el carrusel */
+#onlyslide_img{display: none;} /* CSS para cargar la imagen con FadeIn */
+.no-js #onlyslide_img{display: block!important;} /* Fallback por si no hay JS */
+.flex-pauseplay span {text-transform: capitalize;}
+
+/* Clearfix for the .slides element */
+.slides:after {content: "\0020"; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+html[xmlns] .slides {display: block;}
+* html .slides {height: 1%;}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {display: block;}
+
+
+/* FlexSlider Default Theme
+*********************************/
+/* Suggested container for "Slide" animation setups. Can replace this with your own, if you wish */
+.flex-container {
+	zoom: 1;
+	position: relative;
+	overflow:hidden;
+}
+.flexslider {
+	border: none;
+	position: relative;
+	zoom: 1;
+}
+.flexslider .slides {zoom: 1;}
+.flexslider .slides > li {position: relative;}
+
+
+/* FLEXSLIDER CSS *******************************************************************************
+*************************************************************************************************/
+.loading{ background:url(theme/ajax-loader.gif) no-repeat center center;}
+.loading_video{background:url(theme/ajax-loader-video.gif) no-repeat center center;}
+.flex-container {
+	background:#12141b;
+	border-top-color:#05111f;
+	border-top-style:solid;
+	border-bottom-color:#343539;
+	border-bottom-style:solid;
+	font-family: 'Roboto', Sans-Serif;
+}
+.flexslider{
+	border-top-color:#3c3d41;
+	border-top-style:solid;
+	border-bottom-color:#0d141c;
+	border-bottom-style:solid;
+
+}
+.flexslider .slides {}
+.flexslider .slides li{ overflow:hidden;}
+.flexslider .img_cover {
+	width:100%;
+	height: 100%;
+	position:absolute;
+	background:url(theme/img_cover.gif) repeat;
+	z-index:8888;
+}
+.flexslider .img_fullback {
+	position:absolute;
+	bottom:0;
+	right:0;
+}
+/* Control de Diapositivas */	
+.flex-control-nav{ position:absolute; z-index:9998;}
+.flex-control-nav li {
+	display:block;
+	width:3.6em;
+	height:auto;
+	padding:.6em 0;
+	background:#0e1c2d url(../images/layout/background_textil.gif) repeat 0 0;
+	cursor: pointer;
+	color:#EEE;
+	text-shadow:-2px -1px 0 #000;
+	text-align:center;
+	border:1px solid #172f4b;
+	line-height:1;
+	font-size:80%;
+}
+.flex-control-nav li span i{ font-weight:normal; text-align:center;}
+.flex-control-nav li em{ 
+	font-weight:500;
+	font-size:65%;
+	font-style:normal;
+	text-decoration:overline;
+}
+.flex-control-nav li span{ display:block;  text-align:center;}
+.flex-control-nav li:hover, .flex-control-nav li.active{
+	color:#042e57!important;
+	text-shadow:-2px -1px 0 #DDD!important;
+	cursor:pointer;
+	border:1px solid #444!important;
+	background: #b3b3b3 url(../images/layout/background_pell.jpg) repeat 0 0!important;
+}
+.flex-control-nav li.active{cursor:default!important;}
+/* NEXT-PREV*/
+.flex-direction-nav{display:none;}
+
+/* Caption style */
+.flex-caption {
+	zoom: 1;
+	width:98%;
+	z-index:9900;
+}
+.flex-caption h1, .flex-caption h2{
+	font-weight:700;
+	color:#FFF;
+	text-shadow:2px 2px 2px #000;	
+	z-index:9902;
+	position:relative;
+}
+.archive .flex-caption.caption-postcat h2 em{ text-transform:uppercase; font-style:normal;}
+.flex-caption h4{
+	font-weight:500;
+	color:#FFF;
+	text-shadow:2px 2px 1px #000;	
+	z-index:9904;
+	position:relative;
+}
+.flex-caption p{
+	font-weight:300;
+	color:#FFF;
+	text-shadow:2px 2px 1px #000;	
+	z-index:9903;
+	position:relative;
+}
+.flex-caption p em{font-weight:500; font-style:normal;}
+.flex-caption p a em, .flex-caption p a:visited em{font-weight:700; color:#DDD; line-height:1.4; }
+.flex-caption p a:active em, .flex-caption p a:hover em, .flex-caption p a:active em i, .flex-caption p a:hover em i{ color:#FFF; text-decoration:underline;}
+.flex-caption p a:active em{ position:relative; top:.1em;}
+.flex-caption .mockup{z-index:9901;}
+.flex-caption .calltoact{
+	position:relative;
+	z-index:9904;
+	letter-spacing:.1em;
+}
+/* Caption Contacto */
+.vies_contact{z-index:9901; color:#f9f9f9; text-shadow:2px 2px 1px #1c1e1d!important;}
+.vies_contact header{ 
+	margin:0 1.2em;
+	padding:0;
+	border-bottom:1px solid #9da2a8;
+}
+.vies_contact header h1{ margin:0; padding:0; text-transform:uppercase;}
+.vies_contact section{  margin:.6em 1.2em; padding:0;}
+.vies_contact section ul{ margin:0; padding:0; }
+.vies_contact section ul li{ list-style:none; margin-bottom:.6em; font-weight:300; }
+.vies_contact section ul li i{ margin-bottom:1em; position:relative; top:.3em;}
+.vies_contact section ul li span{ display:none; }
+.vies_contact section ul li b{ font-weight:500; line-height:1; }
+.vies_contact footer {margin:0 1.2em 1.2em 1.2em;padding:.6em 0 0 0; border-top:1px solid #9da2a8;}
+.vies_contact footer p{ color:#f9f9f9; font-weight:700; font-size:1.2em; text-transform:uppercase;}
+.vies_contact footer a{ margin-left:1.3em; border:1px solid #2e3336; box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2), -1px -1px 6px rgba(0, 0, 0, 0.2);}
+.vies_contact footer a img{ display:block; margin:0;}
+.caption_space_contact{ clear:both; display:block;}
+.directrius-more{ color:#FFF; cursor:pointer; display:block; text-align:right; padding:0 1.6em 0 0;}
+.contact-directrius{ display:block;}
+.contact-directrius p{ display:block; position:static; width:100%!important;}
+/* MEDIA QUERY VERY SMALL DEVICES <400PX *************************************************************
+*************************************************************************************************/
+@media only screen and (max-width: 400px) {
+	.flexslider .slides, .flexslider .slides li{height:auto; min-height:12em;}
+	.flexslider ul.compact_header, .flexslider ul.compact_header li{ min-height:4em;}
+	.flex-controls{ margin:0 2% 0 18%;}
+	.flexslider .slides, .flexslider .slides li .vies_contact ul li{ height:auto!important; text-align:left; min-height:1em; }
+
+}
+
+
+/* MEDIA QUERY SMALL DEVICES <480PX *************************************************************
+*************************************************************************************************/
+@media only screen and (max-width: 470px) {
+	/* Border Contenedor */
+	.flex-container, .flexslider{border-top-width:1px;border-bottom-width:1px;}
+	/* Controlando el Fold */
+	.flexslider .slides, .flexslider .slides li{height:auto; min-height:12em;}
+	.flexslider ul.compact_header, .flexslider ul.compact_header li{ min-height:4em;}
+	/* Imagen de Fondo */
+	.flexslider .img_fullback {width:100%; height: auto; min-height:100%;}
+	/* Controles Diapositivas */	
+	.flex-control-nav{ width:100%; top:65%;}
+	.flex-control-nav li{ font-size:100%; border-radius:4px; position:relative; }
+	.flex-control-nav_drag{
+		float:left;
+		right:4px;
+	}
+	.flex-control-nav_ddroid{
+		float:right;
+		left:4px;
+	}
+	/* Caption style */
+	.flex-caption {
+		position:relative;
+		margin:0 auto;
+		text-align:center;
+		z-index:9902;
+	}
+	.flex-caption h2{
+		z-index:9902;
+		width:85%;
+		font-size:.95em;
+		line-height:1.4;
+		margin:2em auto .6em auto;
+	}
+	.flex-caption p{
+		z-index:9903;
+		width:85%;
+		font-size:.85em;
+		line-height:1.6;
+		margin:0 auto .2em auto;		
+	}
+	.flex-caption h2 br, .flex-caption p br{	display:none!important;	}
+	.flex-caption .mockup{width:54%; z-index:9999; margin:0 auto; position:relative; top:-1px;}
+	.flexslider ul.compact_header li .flex-caption{ margin:0 0 2em 0;}
+	.flexslider ul.compact_header li .flex-caption .mockup{ display:none;}
+	.flexslider ul.compact_header li .caption-postcat {margin:0 0 2em 0;}
+	.flexslider ul.compact_header li .caption-postcat p{ padding:0 6%;}
+	.flex-caption .calltoact{
+		z-index:9904;
+		position:relative;
+		font-size:75%;
+		margin:0 0 3em 0;
+		border-radius:4px;
+	}
+	/* Caption Contacto */
+	.caption-contact{ text-align:left;}
+	.vies_contact{
+		width:96%;
+		font-size:80%;
+		padding:.6em!important;
+		margin:1em auto;
+	}
+	.vies_contact header{ margin:0 1em;}
+	.vies_contact header h1{ margin:.3em 0; font-size:1.6em; text-align:left;}
+	.vies_contact section{  margin:.8em 1.6em;}
+	.vies_contact section ul{ width:100%; float:left; margin:0;}
+	.flexslider .slides, .flexslider .slides li .vies_contact ul li{ height:auto; text-align:left; min-height:1em; }
+	.vies_contact footer {margin:0 1.6em 1.6em 1.6em;padding:.8em 0 0 0;}
+	.vies_contact footer p{ margin:0 0 1em 0;}
+	.vies_contact footer a{width:70%; max-width:393px; margin:0;}
+	.caption_space_contact{margin-top:1em;}
+	.caption-contact h2{ margin-left:5%;  border-bottom:1px solid #FFF;}
+	.header-directrius{ font-size:85%; line-height:1.4; margin-left:5%;}
+	.contact-directrius { display:none; width:85%; margin:0 0 0 5%;}
+}
+
+/* MEDIA QUERY MEDIUM DEVICES >480PX & <780PX ***************************************************
+*************************************************************************************************/
+@media only screen and (min-width: 471px) {
+	/* Border Contenedor */
+	.flex-container, .flexslider {border-top-width:1px;	border-bottom-width:1px;}
+	/* Controlando el Fold */
+	.flexslider .slides, .flexslider .slides li{height:auto;  min-height:12em;}
+	.flexslider ul.compact_header, .flexslider ul.compact_header li{ min-height:4em;}
+	/* Imagen de Fondo */
+	.flexslider .img_fullback {min-width:100%; width: auto; height:100%;}
+	/* Controles Diapositivas */	
+	.flex-control-nav{ width:100%; top:55%;}
+	.flex-control-nav li{ 
+		font-size:110%;
+		border-radius:4px;
+		position:relative;
+		box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.5), 4px 4px 4px rgba(0, 0, 0, 0.5);
+	}
+	.flex-control-nav .active{ 
+		box-shadow: inset 4px 4px 4px rgba(255, 255, 255, 0.5), 4px 4px 4px rgba(0, 0, 0, 0.5);
+	}
+	.flex-control-nav_drag{
+		float:left;
+		right:4px;
+	}
+	.flex-control-nav_ddroid{
+		float:right;
+		left:4px;
+	}
+	/* Caption style */
+	.flex-caption {
+		position:relative;
+		margin:0 auto;
+		text-align:center;
+		z-index:9902;
+	}
+	.flex-caption h2{
+		z-index:9902;
+		font-size:1em;
+		line-height:1.4;
+		width:98%;
+		margin:2em 0 .6em 0;
+	}
+	.flex-caption p{
+		z-index:9903;
+		font-size:.8em;
+		line-height:1.6;
+		width:98%;
+		margin:0 0 .2em 0;		
+	}
+	.flex-caption h2 br, .flex-caption p br{	display:inline;	}
+	.flex-caption .mockup{width:40%; z-index:9999; margin:0 auto; position:relative; top:-1px;}
+	.flexslider ul.compact_header li .flex-caption{ padding:0 0 2em 0;}
+	.flexslider ul.compact_header li .flex-caption .mockup{ display:none;}
+	.flexslider ul.compact_header li .caption-postcat {padding:0 0 2em 0;}
+	.flexslider ul.compact_header li .caption-postcat p{ padding:0 10%;}
+	.flex-caption .calltoact{
+		z-index:9904;
+		position:relative;
+		font-size:75%;
+		margin:0 0 2.6em 0;
+		border-radius:4px;
+	}
+	/* Caption Contacto */
+	.caption-contact{ text-align:left;}
+	.vies_contact{
+		width:90%;
+		font-size:80%;
+		padding:.6em!important;
+		margin:2em auto;
+	}
+	.vies_contact header{ margin:0 1em;}
+	.vies_contact header h1{ margin:.3em 0; font-size:1.6em; text-align:left;}
+	.vies_contact section{  margin:.8em 1.6em;}
+	.vies_contact section ul{ width:50%; float:left; margin:0;}
+	.vies_contact ul li{ height:auto!important; text-align:left; min-height:1em!important; }
+	.vies_contact footer {margin:0 1.6em 1.6em 1.6em;padding:.8em 0 0 0;}
+	.vies_contact footer p{ float:left;  width:50%;}
+	.vies_contact footer a{ float:left;  width:40%; margin:0;}
+	.caption_space_contact{margin-top:1em;}
+	.caption-contact h2{ margin-left:5%; width:90%; border-bottom:1px solid #FFF;}
+	.header-directrius{ font-size:85%; line-height:1.4; width:90%;  margin-left:5%;}	
+	.contact-directrius { display:none; width:90%;  margin:0 0 0 5%; }
+}
+/* MEDIA QUERY TABLETS <590PX ***************************************************************
+*************************************************************************************************/
+@media only screen and (min-width: 650px) {
+	/* Controlando el Fold */
+	.flexslider .slides, .flexslider .slides li{height:260px;}
+	.flexslider ul.compact_header, .flexslider ul.compact_header li{ min-height:6em;  height:110px;}
+	/* Imagen de Fondo */
+	.flexslider .img_fullback {width:100%; height:auto;}
+	/* Controles Diapositivas */	
+	.flex-control-nav{ width: auto; top:auto; bottom:-4px; right:2%;}
+	.flex-control-nav li{ 
+		font-size:100%;
+		border-radius:4px;
+		position:relative;
+		float:left;
+		box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.5), inset 0 -4px 4px rgba(0, 0, 0, 0.8), 4px 4px 4px rgba(0, 0, 0, 0.5);
+		top:4px;
+	}
+	.flex-control-nav li:hover{ top:2px;}
+	.flex-control-nav .active{ 
+		top:0px!important;
+		box-shadow: inset 0 4px 4px rgba(255, 255, 255, 0.5), inset 0 -4px 4px rgba(0, 0, 0, 0.5), 4px 4px 4px rgba(0, 0, 0, 0.5);
+	}
+	/* Caption style */
+	.flex-caption {
+		position:absolute;
+		bottom:0;
+		left:1%;
+		text-align:left;
+		padding-left:33%;
+	}
+	.flexslider ul.compact_header li .flex-caption{ padding:0 0 2.6em 33%;}
+	.flexslider ul.compact_header li .caption-postcat {padding:0 0 1em 33%;}
+	.flexslider ul.compact_header li .caption-postcat p{ padding:0;}
+	.flex-caption h2{
+		z-index:9902;
+		font-size:.95em;
+		line-height:1.4;
+		text-align:left;
+		margin:0 0 .4em 0;
+	}
+	.flex-caption p{
+		z-index:9903;
+		font-size:.75em;
+		line-height:1.4;
+		text-align:left;
+		margin:0 0 .4em 0;	
+	}
+	.flex-caption p br{display:none;}
+	.flex-caption .mockup{
+		position:absolute;
+		left:-1%;
+		top: auto;
+		bottom:0;
+		width:36%;
+		z-index:9999;
+	}
+	.flexslider ul.compact_header li .flex-caption .mockup{ display:block;}
+	.flexslider ul.compact_header li .flex-caption .mockup .mockup_wrapper{ float:left; width:49%;}
+	.flexslider ul.compact_header li .flex-caption .mockup .mockup_wrapper:first-child{ position:relative; left:5%;}
+	.flex-caption .calltoact{
+		z-index:9904;
+		position:relative;
+		font-size:75%;
+		margin:1.1em 0 2.6em 0;
+		border-radius:4px;
+	}
+	/* Caption Contacto */
+	.caption-contact{padding-left:60%;}
+	.vies_contact{
+		position:absolute;
+		left:0.5%;
+		width:59%;
+		bottom:0;
+		font-size:74%;
+		padding:.6em!important;
+		margin:0;
+	}
+	.vies_contact header{ margin:0 1em;}
+	.vies_contact header h1{ margin:.3em 0; font-size:1.6em;}
+	.vies_contact section{  margin:.8em 1.6em;}
+	.vies_contact section ul{ width:50%; float:left; margin:0;}
+	.vies_contact ul li{ height:auto!important; }
+	.vies_contact footer {margin:0 1.6em 1.6em 1.6em;padding:.8em 0 0 0;}
+	.vies_contact footer p{ float:left;}
+	.vies_contact footer a{ float:right; width:50%;}
+	.caption_space_contact{margin-top:.4em;}
+	.caption-contact h2{ border-bottom:none;}
+	.header-directrius{ font-size:85%; line-height:1.4;  margin:0 0 .6em 0;}	
+	.contact-directrius { display:none;  margin:0;}
+}
+/* MEDIA QUERY TABLETS LANDSCAPE <790PX ***************************************************************
+*************************************************************************************************/
+@media only screen and (min-width: 790px) {
+	.flex-container, .flexslider {border-top-width:2px;	border-bottom-width:1px;}
+	/* Controlando el Fold */
+	.flexslider .slides, .flexslider .slides li{height:300px; min-height:300px;}
+	.flexslider ul.compact_header, .flexslider ul.compact_header li{ height:135px; min-height:135px;}
+	/* Caption style */
+	.flex-caption {
+		padding-left:42%;
+	}
+	.flexslider ul.compact_header li .flex-caption{ padding:0 0 4em 42%;}
+	.flexslider ul.compact_header li .caption-postcat {padding:0 0 2em 42%;}
+	.flex-caption h2{
+		z-index:9902;
+		font-size:.95em;
+		line-height:1.4;
+		margin:0 0 .4em 0;
+	}
+	.flex-caption p{
+		z-index:9903;
+		font-size:.75em;
+		line-height:1.4;
+		margin:0 0 .4em 0;
+		
+	}
+	.flex-caption p br{display:inline;}
+	.flex-caption .mockup{
+		position:absolute;
+		left:0.5%;
+		bottom:0;
+		width:44%;
+		z-index:9901;
+	}
+	.flexslider ul.compact_header li .flex-caption .mockup .mockup_wrapper{ float:left; width:46%;}
+	.flexslider ul.compact_header li .flex-caption .mockup .mockup_wrapper:first-child{ position:relative; left:5%;}
+	.flex-caption .calltoact{
+		z-index:9904;
+		position:relative;
+		font-size:80%;
+		margin:1.1em 0 4em 0;
+	}
+	/* Caption Contacto */
+	.caption-contact{padding-left:56%;}
+	.caption-contact h4{ font-size:85%; line-height:1.4; margin:0 0 .6em 0;}
+	.vies_contact{
+		left:2%;
+		width:52%;
+		bottom:0;
+		font-size:74%;
+		padding:1em 1.6em;
+	}
+	.vies_contact h1{ font-size:1.4em;}
+	.vies_contact ul{ width:50%;}
+	.vies_contact footer p{ float:left; width:50%;}
+	.vies_contact footer a{ float:left; display:block; width:40%; }
+	.directrius-more{display:none;}	
+	.contact-directrius { display:block; line-height:1.4;}
+	.caption_space_contact{margin-top:1em;}
+	
+}
+/* MEDIA QUERY BIG DEVICES >950PX ***************************************************************
+*************************************************************************************************/
+@media only screen and (min-width: 960px) {
+	/* Controlando el Fold */
+	.flexslider .slides, .flexslider .slides li{height:350px;}
+	.flexslider ul.compact_header, .flexslider ul.compact_header li{ height:165px; min-height:165px;}
+ 	/* Controles Diapositivas */	
+	.flex-control-nav li{font-size:120%;}
+	/* Caption style */
+	.flex-caption {
+		padding-left:44%;
+	}
+	.flexslider ul.compact_header li .flex-caption{ padding:0 0 4em 44%;}
+	.flexslider ul.compact_header li .caption-postcat {padding:0 0 2em 44%;}
+	.flexslider ul.compact_header li .caption-postcat p { width:85%;}
+	.flex-caption h2{
+		z-index:9902;
+		font-size:1.1em;
+		line-height:1.4;
+		margin:0 0 .6em 0;
+	}
+	.flex-caption p{
+		z-index:9903;
+		font-size:.85em;
+		line-height:1.4;
+		margin:0 0 .6em 0;
+		
+	}
+	.flex-caption .mockup{
+		position:absolute;
+		left:2%;
+		bottom:0;
+		width:44%;
+		z-index:9901;
+	}
+	.flex-caption .calltoact{
+		z-index:9904;
+		position:relative;
+		font-size:100%;
+		margin:1.2em 0 4em 0;
+	}
+	/* Caption Contacto */
+	.caption-contact{padding-left:50%;}
+	.vies_contact header{ margin:0 1.6em;}
+	.vies_contact header h1{ margin:.3em 0; font-size:1.6em;}
+	.vies_contact section{  margin:.8em 1.6em;}
+	.vies_contact footer {margin:0 1.6em 1.6em 1.6em;padding:.8em 0 0 0;}
+	.caption-contact h4{ font-size:100%;}
+	.vies_contact{
+		left:2%;
+		width:46%;
+		bottom:0;
+		font-size:80%;
+	}
+	.vies_contact ul{ width:50%;}
+	.vies_contact footer p{ float:none;}
+	.vies_contact footer a{ float:left; width:46%;}
+	.caption_space_contact{margin-top:3em;}
+}
+
+/* MEDIA QUERY VERY BIG DEVICES >1360 ***************************************************************
+*************************************************************************************************/
+@media only screen and (min-width: 1220px) {
+	/* Controlando el Fold */
+	.flexslider .slides, .flexslider .slides li{height:450px;}
+	.flexslider ul.compact_header, .flexslider ul.compact_header li{ height:212px; min-height:212px;}
+	/* Imagen Fondo */
+	.flexslider .img_cover {}
+	.flexslider .img_fullback {}
+	/* Caption style */
+	.flex-caption {
+		padding-left:41%;
+	}
+	.flexslider ul.compact_header li .flex-caption .mockup .mockup_wrapper:first-child{left:5%;}
+	.flexslider ul.compact_header li .flex-caption{ padding:0 0 4em 41%;}
+	.flexslider ul.compact_header li .flex-caption.caption-postcat {padding:0 0 3em 41%;}
+	.flex-caption h2{
+		z-index:9902;
+		font-size:1.4em;
+		line-height:1.4;
+		margin:0 0 .6em 0;
+	}
+	.flex-caption p{
+		z-index:9903;
+		font-size:1em;
+		line-height:1.4;
+		margin:0 0 .6em 0;
+		
+	}
+	.flex-caption .mockup{
+		position:absolute;
+		left:2%;
+		bottom:0;
+		width:41%;
+		z-index:9901;
+	}
+	.flex-caption .calltoact{
+		z-index:9904;
+		position:relative;
+		font-size:100%;
+		margin:1.2em 0 4.6em 0;
+	}
+	/* Caption Contacto */
+	.caption-contact{padding-left:46%;}
+	.caption-contact h4{ font-size:120%;}
+	.vies_contact{
+		left:2%;
+		width:42%;
+		bottom:2.6em;
+		font-size:90%;
+	}
+	.vies_contact header h1{ font-size:1.8em;}
+	.vies_contact ul{ width:50%;}
+	.vies_contact footer a{ width:40%;}
+	.caption_space_contact{margin-top:5em;}
+}
+
+/* MEDIA QUERY MAX PAGE SIZE >1660PX ***************************************************************
+*************************************************************************************************/
+@media only screen and (min-width: 1660px) {
+	/* Controlando el Fold */
+	.flexslider .slides, .flexslider .slides li {height:560px;}
+	.flexslider ul.compact_header, .flexslider ul.compact_header li{ height:288px; min-height:288px;}
+	/* Imagen Fondo */
+	.flexslider .img_fullback {}
+	/* Controles Diapositivas */	
+	.flex-control-nav li{font-size:140%;}
+	/* Caption style */
+	.flex-caption, .caption-contact {
+		padding-left:40%;
+		width:1660px;
+		left:50%;
+		margin-left:-830px;
+	}
+	.flexslider ul.compact_header li .flex-caption{  padding:0 0 4em 40%;}
+	.flexslider ul.compact_header li .caption-postcat {padding:0 0 2em 40%;}
+	.flex-caption h2{
+		font-size:2em;
+		line-height:1.4;
+		margin:0 0 .6em 0;
+	}
+	.flex-caption h4{
+		font-size:1.6em;
+		line-height:1.4;
+		margin:0 0 .6em 0;
+		
+	}
+	.flex-caption p{
+		font-size:1.4em;
+		line-height:1.4;
+		margin:0 0 .6em 0;
+		
+	}
+	.flex-caption .mockup{
+		position:absolute;
+		left:2%;
+		bottom:0;
+		width:42%;
+	}
+	.flex-caption .calltoact{
+		z-index:9904;
+		position:relative;
+		font-size:120%;
+		margin:1.2em 0 4em 0;
+	}
+	/* Caption Contacto */
+	.vies_contact{
+		left:2%;
+		width:36%;
+		bottom:4em;
+		font-size:100%;
+	}
+	.vies_contact header h1{ font-size:1.8em;}
+	.vies_contact footer a{ width:40%;}
+	.caption_space_contact{margin-top:4em;}
+}
+
+/* MEDIA QUERY PORTRAIT ORIENTATION <590PX HACK para asegurar que la imagen (2:1) cubre el 100% del slider
+*************************************************************************************************/
+@media screen and (max-width:590px) and (orientation:portrait)  {
+	/* Border Contenedor */
+	.flex-container, .flexslider {border-top-width:1px;	border-bottom-width:1px;}
+	/* Controlando el Fold */
+	.flexslider .slides, .flexslider .slides li{height:auto;}
+	/* Imagen de Fondo */
+	.flexslider .img_fullback {height:100%; width: auto;}
+	
+}
+
+/* INTERNET EXPLORER CSS (NO MEDIA QUERIES) *****************************************************
+*************************************************************************************************/
+/* Border Contenedor */
+.lt-ie9  .flex-container, .lt-ie9 .flexslider{
+	width:960px;
+	margin:0 auto;
+	border-top-width:1px;
+	border-bottom-width:1px;
+}
+/* Controlando el Fold */
+.lt-ie9 .flexslider .slides, .lt-ie9 .flexslider .slides li {height:350px;}
+.lt-ie9 .flexslider ul.compact_header, .lt-ie9 .flexslider ul.compact_header li{ height:165px; min-height:165px;}
+/* Imagen Fondo */
+.lt-ie9 .flexslider .img_fullback {width:100%; height:auto; z-index:8800;}
+/* Controles Diapositivas */	
+.lt-ie9 .flex-control-nav{ width: auto; top:auto; bottom:-4px; right:2%;}
+.lt-ie9 .flex-control-nav li{ 
+	font-size:100%;
+	border-radius:4px;
+	position:relative;
+	float:left;
+	box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.5), inset 0 -4px 4px rgba(0, 0, 0, 0.8), 4px 4px 4px rgba(0, 0, 0, 0.5);
+	top:4px;
+}
+.lt-ie9 .flex-control-nav li:hover{ top:2px;}
+.lt-ie9 .flex-control-nav .active{ 
+	top:0px!important;
+	box-shadow: inset 0 4px 4px rgba(255, 255, 255, 0.5), inset 0 -4px 4px rgba(0, 0, 0, 0.5), 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+/* Caption style */
+.lt-ie9 .flex-caption {
+	position:absolute;
+	bottom:0;
+	left:1%;
+	text-align:left;
+	padding-left:44%;
+	z-index:9902;
+}
+.lt-ie9 .flexslider ul.compact_header li .flex-caption{ padding:0 0 5em 44%;}
+.lt-ie9 .flexslider ul.compact_header li .flex-caption.caption-postcat{ padding:0 0 3em 44%;}
+.lt-ie9 .flexslider ul.compact_header li .flex-caption .mockup{ display:block;}
+.lt-ie9 .flexslider ul.compact_header li .flex-caption .mockup .mockup_wrapper{ float:left; width:48%; margin-right:1.9%;}
+.lt-ie9 .flexslider ul.compact_header li .flex-caption .mockup .mockup_wrapper:first-child{ position:relative; left:10%;}
+.lt-ie9 .flex-caption h2{
+	z-index:9902;
+	font-size:.95em;
+	line-height:1.4;
+	text-align:left;
+	margin:0 0 .4em 0;
+	z-index:9903;
+}
+.lt-ie9 .flex-caption p{
+	z-index:9903;
+	font-size:.75em;
+	line-height:1.4;
+	text-align:left;
+	margin:0 0 .4em 0;	
+	z-index:9904;
+}
+.lt-ie9 .flex-caption .mockup{
+	position:absolute;
+	left:0;
+	top: auto;
+	bottom:0;
+	width:46%;
+	z-index:9901;
+}
+.lt-ie9 .flex-caption .calltoact{
+	z-index:9904;
+	position:relative;
+	font-size:75%;
+	margin:1.1em 0 5em 0;
+	border-radius:4px;
+}
+/* Caption Contacto */
+.lt-ie9 .caption-contact{padding-left:58%;}
+.lt-ie9 .vies_contact{
+	position:absolute;
+	left:2%;
+	width:54%;
+	bottom:0;
+	font-size:85%;
+	padding:.6em!important;
+}
+.lt-ie9 .vies_contact header{ margin:0 1em;}
+.lt-ie9 .vies_contact header h1{ margin:.3em 0; font-size:1.6em;}
+.lt-ie9 .vies_contact section{  margin:.8em 1.6em;}
+.lt-ie9 .vies_contact section ul{ width:50%; float:left; margin:0;}
+.lt-ie9 .vies_contact ul li{ height:auto!important; }
+.lt-ie9 .vies_contact footer {margin:0 1.6em 1.6em 1.6em;padding:.8em 0 0 0;}
+.lt-ie9 .vies_contact footer p{ font-size:95%;}
+.lt-ie9 .vies_contact footer a{width:220px; margin:0; padding:0;}
+.lt-ie9 .vies_contact footer a img{ margin:0; padding:0;}
+.lt-ie9 .caption_space_contact{margin-top:3em;}
+.lt-ie9 .caption-contact h4{ font-size:85%; line-height:1.4;}
+.lt-ie9 .directrius-more{display:none;}		
+.lt-ie9 .contact-directrius { display:block; line-height:1.4;}
+/* Control Nav */
+.lt-ie9 .flex-control-nav li a, .lt-ie9 .flex-control-nav li a:hover { background:url('../rgba.php?name=white&a=70');}
+.lt-ie9 .flex-control-nav li .active {background: url('../rgba.php?name=romera&a=70');}

@@ -1,0 +1,247 @@
+/*
+    Estils per al plugin  Admin WordPress 720º
+*/
+
+/* LOGIN PAGE ****************************************************************************************
+******************************************************************************************************/
+html{}
+body.login {
+	background:#0e1c2d url(../images/layout/background_textil.gif) repeat 0 0;
+	font-family: 'Roboto', Sans-Serif;
+}
+.login #login h1{padding-top:75px;	background: url(custom_login_logo.gif) no-repeat 0 0;}
+.login #login h1 a{display:none;}
+.login .message{ background:/*#c5c5c5*/rgba(197, 197, 197, 0.3); border:none; border-radius:0; border-top:2px solid #9ba8b7; color:#FFF; text-shadow:2px 1px 1px #222; font-size:110%; font-weight:700;}
+.lt-ie9 .login .message{
+	background:transparent;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#44c5c5c5,endColorstr=#44c5c5c5); 
+    zoom: 1;
+}
+.login #login_error{
+	background:/*#c5c5c5*/rgba(228, 192, 192, 0.3); border:none; border-radius:0; border-top:2px solid #f9a4a4; color:#ffc7c7; text-shadow:2px 1px 1px #000; font-size:110%; font-weight:300;
+}
+.lt-ie9 .login #login_error{
+	background:transparent;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#44e4c0c0,endColorstr=#44e4c0c0); 
+    zoom: 1;
+}
+.login #login_error strong{font-weight:700; text-shadow:2px 1px 1px #222; }
+.login #login_error strong:before{
+	content: "\F071"; 
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    padding-right: 0.6em;
+	}
+.login #login_error a{font-weight:500; color:#FFF; text-decoration:underline; text-shadow:2px 1px 1px #222; }
+.login form{
+	border-top-color:#DDD;
+	border-right-color:#111;
+	border-bottom-color:#111;
+	border-left-color:#DDD;
+	background: #b3b3b3  url(../images/layout/background_pell.jpg) repeat 0 0;
+	moz-box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 4px 0;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 4px 0;
+	box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 4px 0;
+	padding-bottom:5em;
+}
+.login form .input{
+	border-top-color:#666;
+	border-right-color:#FFF;
+	border-bottom-color:#FFF;
+	border-left-color:#666;
+	background-color:#DDD;
+	color:#333;
+	font-size:1em;
+	font-weight:500;
+	line-height:2;
+	moz-box-shadow:inset rgba(0, 0, 0, 0.2) 2px 2px 2px 0;
+	-webkit-box-shadow: inset rgba(0, 0, 0, 0.2) 2px 2px 2px 0;
+	box-shadow: inset rgba(0, 0, 0, 0.2) 2px 2px 2px 0;
+}
+.login form .input:focus{border-top-color:#00376d; border-right-color:#00376d; border-bottom-color:#00376d; border-left-color:#00376d; background-color:#FFF; color:#00376d;}
+.login input.button-primary, .login button.button-primary, .login a.button-primary{
+  border: 1px solid #042e57;
+  border-radius: 4px;
+  background: #004588;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #024a91), color-stop(100%, #00366b));
+  background-image: -webkit-linear-gradient(#024a91, #00366b);
+  background-image: -moz-linear-gradient(#024a91, #00366b);
+  background-image: -o-linear-gradient(#024a91, #00366b);
+  background-image: -ms-linear-gradient(#024a91, #00366b);
+  background-image: linear-gradient(#024a91, #00366b);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 1px 1px 3px rgba(0, 0, 0, 0.5);
+  line-height: 20px;
+  color: #DDD;
+  text-align: center;
+  text-shadow: 1px 2px 0 #001f3e;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:0.1ex;
+  font-size:120%!important;
+}
+.login input.button-primary:hover, .login button.button-primary:hover, .login a.button-primary:hover{ 
+  background: #00366b;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #00366b), color-stop(100%, #002345));
+  background-image: -webkit-linear-gradient(#00366b, #002345);
+  background-image: -moz-linear-gradient(#00366b, #002345);
+  background-image: -o-linear-gradient(#00366b, #002345);
+  background-image: -ms-linear-gradient(#00366b, #002345);
+  background-image: linear-gradient(#00366b, #002345);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 1px 1px 3px rgba(0, 0, 0, 0.5);
+  color: #FFF;
+  text-shadow: 1px 2px 0 #001931;
+}
+.login input.button-primary:active, .login button.button-primary:active, .login a.button-primary:active{ position:relative; top:1px; box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.5), 1px 1px 3px rgba(255, 255, 255, 0.2);}
+.login label { color:#393537; text-shadow:1px 1px 1px #FFF; font-weight:700;}
+.login #nav a, .login #nav a:visited, .login #backtoblog a, .login #backtoblog a:visited{color:#c3c1d3!important; text-decoration:none; text-shadow:1px 1px 1px #000;}
+.login #nav a:hover, .login #nav a:active, .login #backtoblog a:hover, .login #backtoblog a:active{color:#FFF!important; text-decoration:underline;}
+/*SELECCIO de TEXT*/
+::-moz-selection {
+  background: #4161d1;
+  color: #FFF;
+  text-shadow: none;
+}
+
+::-webkit-selection{
+  background: #4161d1;
+  color: #FFF;
+  text-shadow: none;
+}
+
+::selection {
+  background: #4161d1;
+  color: #FFF;
+  text-shadow: none;
+}
+.semitrans{ opacity:0.5;}
+
+/* ADMIN BACKEND *************************************************************************************
+******************************************************************************************************/
+
+/* Estils genèrics **********************************/
+body {}
+h2 .nav-tab, .wrap h2, .subtitle, #poststuff h3, .metabox-holder h3 {font-family:'Roboto', Sans-serif;}
+#wp-version-message{display:none;}
+/* Barra WP */
+#wp-admin-bar-wp-logo, #wp-admin-bar-comments{ display:none;}
+#wpadminbar [class^="icon-"], #wp-adminbar [class*=" icon-"] {font-family: FontAwesome!important; color:#21759B!important;}
+/* Excerpts i charCount */
+.counter{
+	position:absolute;
+	font-size:18px;
+	font-weight:700;
+	font-family:'Roboto', Sans-serif;
+	color:#FFF;
+	background: #090;
+	padding:.2em;
+	border-radius:2px;
+	}
+.counter.warning{background: #F60;}	
+.counter.exceeded{background:#C00;}
+/* Post excerpt */
+#postexcerpt{ position:relative;}
+#postexcerpt .counter{right:.3em;bottom:-.3em;}
+/* Descripció de les categories */
+#acf-metadescription_es, #acf-metadescription_ca, #acf-metadescription_en{position:relative;}
+#acf-metadescription_es .counter, #acf-metadescription_ca .counter, #acf-metadescription_en .counter{right:.6em;top:1.2em;}
+/* Page Description ACF */
+
+/* HELP DOCS *****************************************************************************************
+******************************************************************************************************/
+/* ICONA GRAN DE LA PÀGINA ************************************/
+.wrap #icon-help{ background: url(admin_icons.png) no-repeat -165px 0px!important;}
+.wrap #icon-help-blue{ background: url(admin_icons.png) no-repeat -165px -33px!important;}
+/* WIDGETS PER CADA TEMA **************************************/
+/* TITULARS I ACORDIONS */
+.no-widget .postbox .hndle{ cursor:pointer;}
+.no-widget .postbox .inside h3{ cursor:pointer;}
+.no-widget .postbox h3 i{color:#D54E21;}
+.no-widget .postbox.closed h3 i{color:#a8cedf;}
+.no-widget .postbox.closed h3:hover i {color:#174F69;}
+/* UI DELS CONTINGUTS  */
+.msg_updated, .msg_error{margin: 5px 0 15px; padding: 0 .6em; -webkit-border-radius: 3px; border-radius: 3px; border-width: 1px; border-style: solid;}
+.msg_updated p, .msg_error p{margin: .5em 0; padding: 2px;}
+.msg_updated{background-color: #FFFFE0; border-color: #E6DB55;}
+.msg_error{background-color: #FFEBE8; border-color: #C00;}
+/* ICONES DELS HEADERS */
+.no-widget h3 div.wp-menu-image{float: left; width: 28px; height: 28px; position:relative; top:-8px; left:-6px;}
+.no-widget h3 .menu-icon-faq div.wp-menu-image {/*background-position: -59px -33px;*/}
+.no-widget h3:hover .menu-icon-faq div.wp-menu-image {/*background-position: -59px -1px;*/}
+.no-widget h3 .menu-icon-dashboard div.wp-menu-image {background-position: -59px -33px;}
+.no-widget h3:hover .menu-icon-dashboard div.wp-menu-image {background-position: -59px -1px;}
+.no-widget h3 .menu-icon-post div.wp-menu-image {background-position: -269px -33px;}
+.no-widget h3:hover .menu-icon-post div.wp-menu-image {background-position: -269px -1px;}
+.no-widget h3 .menu-icon-media div.wp-menu-image {background-position: -119px -33px;}
+.no-widget h3:hover .menu-icon-media div.wp-menu-image {background-position: -119px -1px;}
+.no-widget h3 .menu-icon-media div.wp-menu-image {background-position: -119px -33px;}
+.no-widget h3:hover .menu-icon-media div.wp-menu-image {background-position: -119px -1px;}
+.no-widget h3 .menu-icon-links div.wp-menu-image {background-position: -89px -33px;}
+.no-widget h3:hover .menu-icon-links div.wp-menu-image {background-position: -89px -1px;}
+.no-widget h3 .menu-icon-page div.wp-menu-image {background-position: -149px -33px;}
+.no-widget h3:hover .menu-icon-page div.wp-menu-image {background-position: -149px -1px;}
+.no-widget h3 .menu-icon-comments div.wp-menu-image {background-position: -29px -33px;}
+.no-widget h3:hover .menu-icon-comments div.wp-menu-image {background-position: -29px -1px;}
+.no-widget h3 .menu-icon-tools div.wp-menu-image {background-position: -209px -33px;}
+.no-widget h3:hover .menu-icon-tools div.wp-menu-image {background-position: -209px -1px;}
+.no-widget h3 .menu-icon-users div.wp-menu-image {background-position: -300px -33px;}
+.no-widget h3:hover .menu-icon-users div.wp-menu-image {background-position: -300px -1px;}
+/* ESTILS DEL TEXTE */
+.help_img{ max-width:100%; height:auto; border:1px dotted #2c4758; margin:1em 0;}
+.help_img_inline{}
+.fl{ float:left; margin-right:1em;}
+.fr{ float:right; margin-left:1em;}
+.clear{ clear:both;}
+.closer{
+	display:inline-block;
+	margin:2em 0 .3em 0;
+	padding:.2em 1em .2em .6em;
+	border-radius:4px;
+	cursor:pointer;
+	border:1px solid #9e6c6c;
+	background:#ffafaf;
+	font-weight:bold;
+	color:#7a5353;
+	text-shadow:1px 1px 0 #ffcdcd;
+	clear:both;
+}
+.closer:hover{
+	border:1px solid #ffa1a1;
+	background:#ffdddd;
+	text-shadow:1px 1px 0 #FFF;
+}
+.index_a, .index_a:visited{
+	display:block;
+	float:right;
+	margin-right:1em;
+	padding:.3em .6em;
+	line-height:25px;
+	text-align:left;
+	text-decoration:none;
+	font-weight:bold;
+	position:fixed;
+	z-index:9900;
+	right:0;
+	bottom:0;
+	background-color: #464646;
+	background-image: -ms-linear-gradient(bottom,#373737,#464646 5px);
+	background-image: -moz-linear-gradient(bottom,#373737,#464646 5px);
+	background-image: -o-linear-gradient(bottom,#373737,#464646 5px);
+	background-image: -webkit-gradient(linear,left bottom,left top,from(#373737),to(#464646));
+	background-image: -webkit-linear-gradient(bottom,#373737,#464646 5px);
+	background-image: linear-gradient(bottom,#373737,#464646 5px);
+	color:#CCC;
+	text-shadow:1px 1px 0 #000;
+	border:1px solid #222;
+	border-top-radius:2px;
+}
+.index_a:active, .index_a:hover{
+	background-color: #262626;
+	background-image: -ms-linear-gradient(bottom,#171717,#262626 5px);
+	background-image: -moz-linear-gradient(bottom,#171717,#262626 5px);
+	background-image: -o-linear-gradient(bottom,#171717,#262626 5px);
+	background-image: -webkit-gradient(linear,left bottom,left top,from(#171717),to(#262626));
+	background-image: -webkit-linear-gradient(bottom,#171717,#262626 5px);
+	background-image: linear-gradient(bottom,#171717,#262626 5px);
+}

@@ -1,0 +1,81 @@
+/* WIDGETS ESCRIPTORI (ACCESSOS DIRECTES) ************************************************************
+******************************************************************************************************/
+/*FORMAT DEL WIDGET*/
+.wp-admin .inside a.wdgt_dash{	overflow: hidden; display:block; padding: 0 12px 12px;	text-align: center; color: #999; font-size: 16px;line-height: 1.5; margin:0; text-align:center; cursor:pointer;}
+.wp-admin .inside a.wdgt_dash b{ font-weight:400;  margin:1em 0 0 0;}
+.wp-admin .inside a.wdgt_dash b:before{ font: 400 120px/1 dashicons; speak: none; display: block; margin: 0 5px 20px 0; padding: 0; text-indent: 0; text-align: center; position: relative; webkit-font-smoothing: antialiased; text-decoration: none!important; content: "\f111";}
+.wp-admin .inside a.wdgt_dash:hover b{ color:#444;}
+.wp-admin .inside a.wdgt_dash:hover b:before{ color:#048f3e;}
+@media only screen and (max-width: 482px) {
+	.wp-admin .inside a.wdgt_dash b:before{font-size: 45px;}
+}
+@media only screen and (min-width: 483px) and (max-width: 782px) {
+	.wp-admin .inside a.wdgt_dash b:before{font-size: 90px;}
+}
+/*ICONES PER CADA WIDGET*/
+.wp-admin .inside a.wdgt_dash.wdgt_help b:before{ content: '\f468';}
+/* HELP DOCS *****************************************************************************************
+******************************************************************************************************/
+/* TITULARS I ACORDIONS */
+.no-widget .postbox .hndle{ cursor:pointer;}
+.postbox .handlediv{ height:30px; width:27px;}
+.postbox .handlediv:before{ display:inline-block; font:400 20px/1 dashicons; content:'\f142'; padding-bottom: 8px; padding-left: 10px; padding-right: 10px; padding-top: 8px; height:20px; position:relative; right:12px; top:0;}
+.postbox.closed .handlediv:before{ display:inline-block; font:400 20px/1 dashicons; content:'\f140'; padding-bottom: 8px; padding-left: 10px; padding-right: 10px; padding-top: 8px; height:20px; position:relative; right:12px; top:0;}
+.no-widget .postbox .inside h3{ cursor:pointer;}
+.no-widget .postbox h3 i{color:#D54E21;}
+.no-widget .postbox.closed h3 i{color:#a8cedf;}
+.no-widget .postbox.closed h3:hover i {color:#174F69;}
+/* UI DELS CONTINGUTS  */
+.msg_updated, .msg_error{margin: 5px 0 15px; padding: 0 .6em; -webkit-border-radius: 3px; border-radius: 3px; border-width: 1px; border-style: solid;}
+.msg_updated p, .msg_error p{margin: .5em 0; padding: 2px;}
+.msg_updated{background-color: #FFFFE0; border-color: #E6DB55;}
+.msg_error{background-color: #FFEBE8; border-color: #C00;}
+/* ICONES DELS HEADERS */
+.hndle>span { padding-right:.3em;}
+.closed h3.hndle .dashicons:before{ color:#BBB;}
+.closed h3.hndle:hover .dashicons:before{ color:#666;}
+h3.hndle .dashicons:before{ color:#222;}
+/* ESTILS DEL TEXTE */
+.help_img{ max-width:100%; height:auto; border:1px dotted #2c4758; margin:1em 0;}
+.help_img_inline{}
+.fl{ float:left; margin-right:1em;}
+.fr{ float:right; margin-left:1em;}
+.clear{ clear:both;}
+.closer{
+	display:inline-block;
+	margin:2em 0 .3em 0;
+	padding:.2em 1em .2em .6em;
+	border-radius:4px;
+	cursor:pointer;
+	border:1px solid #9e6c6c;
+	background:#ffafaf;
+	font-weight:bold;
+	color:#7a5353;
+	text-shadow:1px 1px 0 #ffcdcd;
+	clear:both;
+}
+.closer:hover{
+	border:1px solid #ffa1a1;
+	background:#ffdddd;
+	text-shadow:1px 1px 0 #FFF;
+}
+.index_a, .index_a:visited{
+	display:block;
+	float:right;
+	margin-right:1em;
+	padding:.3em .6em;
+	line-height:20px;
+	text-align:left;
+	text-decoration:none;
+	font-weight:bold;
+	position:fixed;
+	z-index:9900;
+	right:0;
+	bottom:0;
+	background-color: #88cb5a;
+	color:#EEE;
+}
+.index_a:active, .index_a:hover{
+	background-color: #048f3e;
+	color:#FFF!important;
+}

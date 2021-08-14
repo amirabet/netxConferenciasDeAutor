@@ -1,0 +1,27 @@
+/* WIDGETS ESCRIPTORI (ACCESSOS DIRECTES) ************************************************************
+******************************************************************************************************/
+/*FORMAT DEL WIDGET*/
+.wp-admin .inside a.wdgt_dash{	overflow: hidden; display:block; padding: 0 12px 12px;	text-align: center; color: #999; font-size: 16px;line-height: 1.5; margin:0; text-align:center; cursor:pointer;}
+.wp-admin .inside a.wdgt_dash b{ font-weight:400;  margin:1em 0 0 0;}
+.wp-admin .inside a.wdgt_dash b:before{ font: 400 120px/1 dashicons; speak: none; display: block; margin: 0 5px 20px 0; padding: 0; text-indent: 0; text-align: center; position: relative; webkit-font-smoothing: antialiased; text-decoration: none!important; content: "\f111";}
+.wp-admin .inside a.wdgt_dash:hover b{ color:#444;}
+.wp-admin .inside a.wdgt_dash:hover b:before{ color:#048f3e;}
+@media only screen and (max-width: 482px) {
+	.wp-admin .inside a.wdgt_dash b:before{font-size: 45px;}
+}
+@media only screen and (min-width: 483px) and (max-width: 782px) {
+	.wp-admin .inside a.wdgt_dash b:before{font-size: 90px;}
+}
+/*ICONES PER CADA WIDGET*/
+/*.wp-admin .inside a.wdgt_dash.wdgt_autores b:before{ content: '\f337';}
+.wp-admin .inside a.wdgt_dash.wdgt_news b:before{ content: '\f119';}*/
+.wp-admin .inside a.wdgt_dash.wdgt_profile b:before{ content: "\f110";}
+.wp-admin .inside a.wdgt_dash.wdgt_comments b:before{ content: '\f101';}
+.wp-admin .inside a.wdgt_dash.wdgt_show b:before{ content: '\f115';}
+/*.wp-admin .inside a.wdgt_dash.wdgt_reader b:before{ content: '\f303';}
+.wp-admin .inside a.wdgt_dash.wdgt_social b:before{ content: "\f301";}
+.wp-admin .inside a.wdgt_dash.wdgt_stats b:before{ content: "\f239";}
+.wp-admin .inside a.wdgt_dash.wdgt_help b:before{ content: '\f468';}*/
+/* Icona pel widget d'Eventos */
+.wp-admin .inside a.wdgt_dash.wdgt_events b:before{ content: '\f145';}
+/**/

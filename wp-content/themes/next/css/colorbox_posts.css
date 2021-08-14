@@ -1,0 +1,182 @@
+/*
+    Colorbox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9990; overflow:visible; text-shadow:2px 2px 0 #000;}
+#colorbox {overflow:visible!important;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative; overflow:visible; height:100%;}
+#cboxLoadedContent{overflow:auto; -webkit-overflow-scrolling: touch;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block; max-width:none; -ms-interpolation-mode:bicubic;}
+.cboxIframe{display:block;}
+#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box; -moz-box-sizing:content-box; -webkit-box-sizing:content-box;}
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of Colorbox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay{background:#0E1C2D;}
+#colorbox{outline:0;}
+#cboxError{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 300px;
+	height: 240px;
+	padding: 0;
+	margin: -120px 0 0 -150px;
+	line-height: 240px;
+	text-align: center;
+	font-family:'Roboto', Sans-serif;
+	font-weight:bold;
+	font-size:1em;
+	color:#C01800;
+}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; width:100%; height:100%;background:url(../flexslider/theme/ajax-loader2.gif) no-repeat center center;}
+
+/* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
+#cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose { border:0; padding:0; margin:0; overflow:visible; width:auto; background:none; }
+
+/* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
+#cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {outline:0;}
+.cboxIframe{background:none; border:1px solid #02070d; box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.6);}
+#cboxSlideshow{position:absolute; bottom:0px; right:0; color:#444;}
+#cboxCurrent{display:block;}
+#cboxTitle{display:block;}
+/*
+  The following fixes a problem where IE7 and IE8 replace a PNG's alpha transparency with a black fill
+  when an alpha filter (opacity change) is set on the element or ancestor element.  This style is not applied to or needed in IE9.
+  See: http://jacklmoore.com/notes/ie-transparency-problems/
+*/
+.cboxIE #cboxTopLeft,
+.cboxIE #cboxTopCenter,
+.cboxIE #cboxTopRight,
+.cboxIE #cboxBottomLeft,
+.cboxIE #cboxBottomCenter,
+.cboxIE #cboxBottomRight,
+.cboxIE #cboxMiddleLeft,
+.cboxIE #cboxMiddleRight {
+}
+#cboxContent{
+	display:block;
+	text-shadow:2px 1px 1px #dfdfdf;
+	border-radius:6px;
+	padding:.6em;
+	background: #b3b3b3  url(../images/layout/background_pell.jpg) repeat 0 0;
+	border-top:1px solid #777;
+	border-right:1px solid #292c33;
+  	border-bottom:1px solid #292c33;
+	border-left:1px solid #999;
+  	box-shadow: inset 2px 4px 6px rgba(0, 0, 0, 0.3), inset 0 -6px 12px rgba(255, 255, 255, 0.4), 3px 3px 12px rgba(0, 0, 0, 0.6);
+}
+#cboxLoadedContent{ z-index:9600;}
+#cboxCurrent{display:none;}
+#cboxTitle{display:none!important;}
+#cboxPrevious{ position:absolute; z-index:9602; text-align:left;}
+#cboxNext{ position:absolute; z-index:9601; text-align:right; padding-left:50%;}
+#cboxClose{ position:absolute; z-index:9603;}
+#cboxClose:after, #cboxNext:after, #cboxPrevious:before{ 
+  display:block;
+  position:relative;
+  font-family:'FontAwesome';
+  background: #bdc9d5;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d8e4f0), color-stop(100%, #99a2ab));
+  background-image: -webkit-linear-gradient(#d8e4f0, #99a2ab);
+  background-image: -moz-linear-gradient(#d8e4f0, #99a2ab);
+  background-image: -o-linear-gradient(#d8e4f0, #99a2ab);
+  background-image: -ms-linear-gradient(#d8e4f0, #99a2ab);
+  background-image: linear-gradient(#d8e4f0, #99a2ab);
+  -moz-transition: 0.2s ease-in;
+  -webkit-transition: 0.2s ease-in;
+  -o-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+  line-height:1.3em;
+  width:1.2em;
+  height:1.2em;
+  padding:.2em;
+  border: 1px solid #81868A;
+  border-radius: .8em;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 3px 3px 6px rgba(0, 0, 0, 0.5);
+  color: #374047;
+  text-align: center;
+  text-shadow: 1px 1px 0 #dfe9f5;
+}
+#cboxClose:hover:after, #cboxNext:hover:after, #cboxPrevious:hover:before{
+  background: #cfdbe7;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e2effc), color-stop(100%, #adb7c1));
+  background-image: -webkit-linear-gradient(#e2effc, #adb7c1);
+  background-image: -moz-linear-gradient(#e2effc, #adb7c1);
+  background-image: -o-linear-gradient(#e2effc, #adb7c1);
+  background-image: -ms-linear-gradient(#e2effc, #adb7c1);
+  background-image: linear-gradient(#e2effc, #adb7c1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 1px 1px 3px rgba(0, 0, 0, 0.3);
+  -moz-transition: 0.2s ease-in;
+  -webkit-transition: 0.2s ease-in;
+  -o-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+  color: #21272b;
+  text-shadow: 1px 1px 0 #f2f8ff;
+}
+#cboxClose:active:after, #cboxNext:active:after, #cboxPrevious:active:before{
+  top:.1em;
+  background: #bdc9d5;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #99a2ab), color-stop(100%, #d8e4f0));
+  background-image: -webkit-linear-gradient(#99a2ab, #d8e4f0);
+  background-image: -moz-linear-gradient(#99a2ab, #d8e4f0);
+  background-image: -o-linear-gradient(#99a2ab, #d8e4f0);
+  background-image: -ms-linear-gradient(#99a2ab, #d8e4f0);
+  background-image: linear-gradient(#99a2ab, #d8e4f0);
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.5), 1px 1px 3px rgba(255, 255, 255, 0.2);
+  -moz-transition: 0s ease-in;
+  -webkit-transition: 0s ease-in;
+  -o-transition: 0s ease-in;
+  border: 1px solid #333;
+}
+#cboxPrevious:before{ position:relative; content:"\f053";}
+#cboxNext:after{ position:relative; content: "\f054";}
+#cboxClose:after{content: "\F00D";}
+@media only screen and (orientation : landscape) {
+	#cboxPrevious{ height:100%; width:50%; top:0; left:0;}
+	#cboxPrevious:before{ left:-.8em;}
+	#cboxNext{height:100%; width:50%; top:0; right:0;}
+	#cboxNext:after{right:.8em;}
+	#cboxClose, #cboxClose:visited{ height:5%; top:-2.5%; right:-1.2%;}
+}
+@media only screen and (orientation : portrait) {
+	#cboxPrevious{ height:100%; width:50%; top:0; left:0;}
+	#cboxPrevious:before{ left:-.8em;}
+	#cboxNext{height:100%; width:50%; top:0; right:0;}
+	#cboxNext:after{right:.5em;}
+	#cboxClose, #cboxClose:visited{ height:5%; top:-2.5%; right:-1.2%;}
+}
+@media only screen and (max-width: 470px) {
+	#cboxPrevious:before, #cboxNext:after, #cboxClose:after{font-size:86%;}
+}
+@media only screen and (min-width: 471px) and (max-width: 720px) {
+	#cboxPrevious:before, #cboxNext:after, #cboxClose:after{font-size:96%;}
+}
+@media only screen and (min-width: 721px) and (max-width: 960px) {
+	#cboxPrevious:before, #cboxNext:after, #cboxClose:after{font-size:116%;}
+}
+@media only screen and (min-width: 961px) {
+	#cboxPrevious:before, #cboxNext:after, #cboxClose:after{font-size:126%;}
+}
+@media only screen and (min-width: 1220px) {
+	#cboxPrevious:before, #cboxNext:after, #cboxClose:after{font-size:136%;}
+}
+@media only screen and (min-width: 1420px) {
+	#cboxPrevious:before, #cboxNext:after, #cboxClose:after{font-size:146%;}
+}
+@media only screen and (min-width: 1660px) {
+	#cboxPrevious:before, #cboxNext:after, #cboxClose:after{font-size:156%;}
+}
+/* Internet Explorer */
+.lt-ie9 #cboxPrevious{ height:100%; top:0; left:0;}
+.lt-ie9 #cboxNext{height:100%; top:0; right:0;}
+.lt-ie9 #cboxClose, .lt-ie9 #cboxClose:visited{ height:5%; top:-5%; right:0;}
+.lt-ie9 #cboxPrevious:before, .lt-ie9 #cboxNext:after, .lt-ie9 #cboxClose:after{font-size:126%;}

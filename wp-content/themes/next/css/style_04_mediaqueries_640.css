@@ -1,0 +1,1384 @@
+/**************************************************************************************************
+SINGLESITE CSS
+**************************************************************************************************/
+/**/
+/* MEDIA QUERY MEDIUM DEVICES <640PX *************************************************************
+*************************************************************************************************/
+/*
+	NOTA: Aquí s'activen tots els formats de columna
+*/
+@media only screen and (min-width: 620px) {
+/* HELPERS ***************************************************************************************
+**************************************************************************************************
+**************************************************************************************************
+**************************************************************************************************
+**************************************************************************************************/
+	dd {}
+	menu, ol, ul {}
+	/* LAYOUT COLS **************************************************************/
+	/* Columns RAW */
+	.col_full, .col_half, .col_third, .col_2thirds .col_quarter, .col_3quarters{}
+	.col_full{}
+	.col_half{}
+	.col_third{ width:33%;}
+	.col_2thirds{ width:66%;}
+	.col_quarter{width:25%;}
+	.col_3quarters{width:75%;}
+	/* Columns with Margin -> 2%*/
+	.col_1, .col_3-1, .col_3-2, .col_4-1, .col_4-3, .col_5-1, .col_5-2, .col_5-3, .col_5-4{margin:0 0 2% 2%;}
+	.col_2-1 img, .col_3-1 img, .col_3-2 img, .col_4-1 img, .col_4-3 img, .col_5-1 img, .col_5-2 img, .col_5-3 img, .col_5-4 img{}
+	.col_1{}
+	.col_2-1{width:47%;}
+	.col_3-1{width:30.6%;}
+	.col_3-2{width:63.3%;}
+	.col_4-1{width:22.5%;}
+	.col_4-3{width:71.5%;}
+	.col_5-1{width:17.6%;}
+	.col_5-2{width:37.2%;}
+	.col_5-3{width:56.8%;}
+	.col_5-4{width:76.4%;}
+	/* Reset padding i margin laterals per a cols */
+	.col_2-1.pl, .col_3-1.pl, .col_3-2.pl, .col_4-1.pl, .col_4-2.pl, .col_4-3.pl, .col_5-1.pl, .col_5-2.pl, .col_5-3.pl, .col_5-4.pl{padding-left:1.5em;}
+	.col_2-1.pr, .col_3-1.pr, .col_3-2.pr, .col_4-1.pr, .col_4-2.pr, .col_4-3.pr, .col_5-1.pr, .col_5-2.pr, .col_5-3.pr, .col_5-4.pr{padding-right:1.5em;}
+	/**/
+	/* BOX STYLE ***************************/
+	/* Margin -> 2% */
+	.box{}
+	.box header{padding:.6em 2%;}
+	.box header h1, .box header h2, .box header h3, .box header h4, .box header h5, .box header h6{}
+	.box header h1{ font-size:1.4em;}
+	.box section{padding:1em 2%;}
+	/* Box Cols */
+	.box.col_1 header, .box.col_1 section{padding:2%;}
+	.box.col_2-1 header, .box.col_2-1 section{padding:4%;}
+	.box.col_3-1 header, .box.col_3-1 section{padding:6%;}
+	.box.col_3-2 header, .box.col_3-2 section{padding:3%;}
+	.box.col_4-1 header, .box.col_4-1 section{padding:8%;}
+	.box.col_4-3 header, .box.col_4-3 section{padding:2.6%;}
+	.box.col_5-1 header, .box.col_5-1 section{padding:10%;}
+	.box.col_5-2 header, .box.col_5-2 section{padding:5%;}
+	.box.col_5-3 header, .box.col_5-3 section{padding:3.3%;}
+	.box.col_5-4 header, .box.col_5-4 section{padding:2.5%;}
+	.box.col_1 section,.box.col_2-1 section,.box.col_3-1 section,.box.col_3-2 section,.box.col_4-1 section,.box.col_4-3 section,.box.col_5-1 section,.box.col_5-2 section,.box.col_5-3 section,.box.col_5-4 section{padding-top:1em; padding-bottom:1em;}
+	.box.col_1 header,.box.col_2-1 header,.box.col_3-1 header,.box.col_3-2 header,.box.col_4-1 header,.box.col_4-3 header,.box.col_5-1 header,.box.col_5-2 header,.box.col_5-3 header,.box.col_5-4 header{padding-top:.6em; padding-bottom:.6em;}
+	/* Box Light */
+	.box-light{}
+	.box-light header{}
+	.box-light em, .box-light .fa{}
+	.box-light section{}
+	/* Box Success */
+	.box-success{}
+	.box-success header{}
+	.box-success em, .box-success .fa{}
+	.box-success section{}
+	/* Box Error */
+	.box-error{}
+	.box-error header{}
+	.box-error em, .box-error .fa{}
+	.box-error section{}
+	/* Banner */
+	.box-banner{}
+	.box-banner section{}
+	.box-banner section p{}
+	.box-banner section p em{}
+	.box-banner section .fa{}
+	/**/
+	/* GLOBAL TRICKS */
+	.fl{}
+	.fr{}
+	.fn{}
+	.clearboth{}
+	.hidden{}
+	.nowrap{}
+	.wrap_content{}
+	.mt{}
+	.mr{}
+	.mb{}
+	.ml{}
+	.mauto{}
+	.pt{}
+	.pr{}
+	.pb{}
+	.pl{}
+	/* SCREEN TYPE ELEMENTS */
+	.big_screen{}
+	.small_screen{}
+	.phone_screen{display:none;}
+	.phone_screen_not{display:inline;}
+	/**/
+	/* FINAL GLOBALS ********************************************************************************/
+	/**/
+	/* TIPOGRAFIA ************************************************************************************
+	**************************************************************************************************
+	**************************************************************************************************
+	**************************************************************************************************
+	**************************************************************************************************
+	*/
+	/**/
+	/* TIPOGRAFIA GLOBAL HTML */
+	body, input, textarea {}
+	figcaption {} /* Estils pel Fgcaption */
+	code{}
+	p code{}
+	blockquote {
+		margin: .6em 0;
+		width:60%;
+		float:left;
+	}
+	/* TIPOGRAFIA WORDPRESS*/
+	h1, h2,.entry-title,h3,h4,.widgettitle,h5,h6,.page-title {}
+	.page-title {}
+	h1 {}
+	h1.brdr_dwn{ line-height: 1.8; text-indent:.2em;}
+	h2, .entry-title {}
+	h3 {}
+	h4, .widgettitle {}
+	h5 {}
+	h6 {}
+	/* LINKS */
+	a , a:visited {}
+	a:hover , a:active{}
+	a:active{}
+	/* BOTONS */
+	.button{}
+	.button:hover{}
+	.button-primary{}
+	.button-primary:hover{}
+	/* CalltoAct */
+	.calltoact{}
+	.calltoact:hover, .calltoact:active{}
+	.calltoact:active{}
+	/* READMORE SECTION */
+	.wrap_readmore{}
+	.wrap_readmore .readmore_button{}
+	.wrap_readmore .readmore_button .readmore{}
+	.wrap_readmore .readmore_button .readmore:before, .wrap_readmore .readmore_button .readmore:after{}
+	.wrap_readmore .readmore_button .readmore:before{}
+	.wrap_readmore .readmore_button .readmore:after{}
+	.wrap_readmore .readmore_button .readmore.readopen:before{}
+	.wrap_readmore .readmore_button .readmore.readopen:after{}
+	.wrap_readmore .readmore_content{}
+	/* CSS WORDPRESS CHILD THEME**********************************************************************
+	**************************************************************************************************
+	**************************************************************************************************
+	**************************************************************************************************
+	**************************************************************************************************
+	*/
+	/* MEDIA QUERY GLOBAL ****************************************************************************
+	*************************************************************************************************/
+	/**/  html{}
+	/**/  body {} /* Alçada header -> [nav off] - 1px */
+		  /**/.no-js body {} /* Alçada no JS (a 1 linies = 28px) */
+	/**/  #wrapper{}
+	/**/
+	/* HEADER ***************************************************************************
+	*************************************************************************************/
+	/* TO DO: 
+	   > MENU ALS MEDIAQUERIES
+	*/
+	#header{}
+	/**/.no-js #header{} /* avís no JS (a 1 linies = 28px) */
+	#header #head_wrap {}
+	/* BRANDING *******************************************/
+	/* Menu Button @ 48px */
+	#branding{}
+	#branding-logo{}
+	#branding-logo a{}
+	#branding-logo a span{}
+	#branding-logo a span em{}
+	/* LOGO */
+	#branding-logo a img{}
+	/* BLOG TITLE */
+	#branding-logo a #blog-title {}
+	#branding-logo a #blog-title em {}
+	#branding-logo a #blog-title:hover, #branding:hover #blog-title {}
+	#branding-logo a #blog-title:hover em, #branding:hover #blog-title em{}
+	.no-js #branding-logo a{}
+	/* BLOG DESCRIPTION */
+	#blog-description {}
+	/* HEADER WIDGET **************************************/
+	#header-widget {}
+	#header-widget .widgetcontainer{}
+	#header-widget .widgetcontainer ul  {}
+	#header-widget .widgettitle {}
+	#header-widget address,#header-widget form {}
+	/* MULTI-MENU *****************************************/
+	/* MENU BUTTON */
+	.menu-button .menu-title{}
+	.menu-button {}
+	.menu-button:hover, .menu-button:active{}
+	.menu-button .fa{}
+	.menu-button .fa-times{}
+	.menu-button.nav-open{}
+	.menu-button.nav-open:hover, .menu-button.nav-open:active {}
+	.no-js .menu-button {}
+	/* WRAPPER MULTIMENU */
+	#access {}
+	.no-js #access {}
+	/* MENU LINKS GLOBAL WIDTH*/
+	.access-nav {}
+	.access-nav .menu {}
+	.js .access-nav {}
+	.no-js .access-nav {}
+	/* Adaptar els elements del menu a mediaqueries */
+	.access-nav ul {}
+	.access-nav li {}
+	.access-nav li a {}
+	.access-nav li a:hover {}
+	.access-nav li.active a {}
+	.access-nav li.active a:hover {}
+	.access-nav li a:active{}
+	.access-nav li:last-child {}
+	.access-nav li ul {}
+	.access-nav li.active{}
+	.access-nav li.active a{}
+	.access-nav li.active a:hover, .access-nav li.active a:active{}
+	.current_page_item a, .current_page_item a:visited, .current_page_parent a, .current_page_parent a:visited{}
+	.current_page_parent a:hover, .current_page_parent a:active{}
+	/* HEADER-SEARCHFORM *****************************************/
+	/* MENU BUTTON */
+	.head-search-button .head-search-title{}
+	.head-search-button {display:none;}
+	.head-search-button:hover, .head-search-button:active {}
+	.head-search-button .fa{}
+	.head-search-button .fa-search-minus{}
+	.head-search-button.nav-open{}
+	.head-search-button.nav-open .fa{}
+	.head-search-button.nav-open:hover, .menu-button.nav-open:active {}
+	.head-search-button.nav-open .fa-search{}
+	.head-search-button.nav-open .fa-search-minus{}
+	.head-search-button.nav-open{}
+	.head-search-button.nav-open:hover, head-search-button.nav-open:active {}
+	.no-js .head-search-button {}
+	/* SearchForm Field*/
+	#header form{ background:none; position:absolute; padding:0; right:8px; top:11px;}
+	#header #searchform{display:block; clear:none; float:right;}
+	#header #searchform input{width:260px;border:1px solid #CCC; background: #EEE url(../images/layout/searchicon.gif) no-repeat 98% center; color:#999;}
+	#header #searchform input:focus{border:1px solid #048F3E; background: #FFF;}
+	#header #searchform input.ui-autocomplete-loading{background: #FFF url(../images/layout/loader_smll.gif) no-repeat 98% center;}
+	#header #searchform #searchsubmit{}
+	/* Search autocomplete */
+	#header #searchform .ui-helper-hidden-accessible{}
+	ul.ui-autocomplete{width:260px;}
+	ul.ui-autocomplete li.ui-menu-item{margin:0 1px 0 0;}
+	ul.ui-autocomplete li.ui-menu-item a{font-size:.9em;}
+	ul.ui-autocomplete li.ui-menu-item a:hover, ul.ui-autocomplete li.ui-menu-item a:active{}
+	ul.ui-autocomplete li.ui-menu-item a img{}
+	ul.ui-autocomplete li.ui-menu-item:nth-child(odd) a{}
+	/**/
+	/* FOLD *****************************************************************************
+	*************************************************************************************/
+	#fold{}
+	/* FLEXSLIDER FOLD ************************************/
+	/* TO DO: 
+	   > Alçada concreta de slider amb mediaqueries per evitar el salt
+	*/
+	/* FlexSlider Theme
+	*********************************/
+	/* Slides */
+	.flex-container{}
+	.flexslider {}
+	.flexslider.loading {}
+	.flexslider .slides > li {}
+	/* Images */
+	.flexslider {}
+	.flexslider .slides .img_cover{}
+	.flexslider .slides .img_fullback {} /* Posicion imatges TOTES => l eft:0; top:0; big_screens => width:100%; height: auto; small_screens => width:auto; height: 100%;*/
+	/* Control Nav */
+	.flex-control-nav {}
+	.flex-control-nav li {}
+	.flex-control-nav li:first-child {}
+	.flex-control-nav li:before{}
+	.flex-control-nav li:hover {}
+	.flex-control-nav li.active:hover {}
+	.flex-control-nav li.active:before {}
+	/* Direction Nav */
+	.flex-direction-nav {}
+	.flex-direction-nav li{}
+	.flex-direction-nav li a {}
+	.flex-direction-nav li a:hover {}
+	.flex-direction-nav li a.disabled {}
+	.flex-direction-nav li a.prev{}
+	.flex-direction-nav li a.prev:before {}
+	.flex-direction-nav li a.next {}
+	.flex-direction-nav li a.next:after {}
+	/* PlayPause */
+	.flex-pauseplay {}
+	.flex-pauseplay span{}
+	.flex-pauseplay span.play:after{}/* ICONO DE PAUSA */
+	.flex-pauseplay span.pause:after{}/* ICONO DE PLAY */
+	/* Caption style */
+	.flex-caption{}
+	.flex-caption h2 {font-size:1.6em; }
+	.flex-caption h3 {font-size:1.2em;}
+	.flex-caption p {} 
+	.flex-caption p.small {}
+	/* Links & Calltoaction */
+	.flex-caption a, .flex-caption a:visited {}
+	.flex-caption a:hover, .flex-caption a:active {}
+	.flex-caption a.calltoact{
+		display:inline-block; position:relative;
+		padding:.7em 1.2em .8em 0;
+		font-weight:400; font-size:1.5em;
+		text-align:left;
+	}
+	.flex-caption a.calltoact .fa{position:absolute; top:.7em; right:0;font-size:1em;}
+	.flex-caption a.calltoact:hover {}
+	.flex-caption a.calltoact:hover .fa{}
+	.flex-caption a.calltoact:active {}
+	.flex-caption a.calltoact:active {}
+	.flex-caption a:hover, .flex-caption a:active {}
+	/* Estil compacte */
+	.flexslider.small {}  
+	.flexslider.small .slides > li {}
+	.flexslider.small .slides .img_fullback {} /* Posicion imatges TOTES => l eft:0; top:0; big_screens => width:100%; height: auto; small_screens => width:auto; height: 100%;*/
+	.flexslider.small .flex-caption div {}
+	.flexslider.small .flex-caption div span h2 {}
+	.flexslider.small .flex-caption div span h3 {}
+	.flexslider.small .flex-caption a, .flexslider.small .flex-caption a:visited {}
+	/* Single Caption Style */
+	#singlecaption{}
+	#singlecaption p{}
+	#singlecaption p em{}
+	#singlecaption h2{}
+	#singlecaption h3{}
+	#singlecaption a{}
+	#singlecaption a span{}
+	#singlecaption a:hover span{}
+	/* Custom Styles ********************/
+	/* Home > El Flexslider de la Pàgina d'inici*/
+	.home .flexslider .slides .img_fullback {position:relative; left:0; top:0; width:114.28%; height:auto;  }
+	.home .flex-caption {position:absolute; left:0; top:0;text-align:center;}
+	.home .flex-caption h2 {
+		font-size:1.8em;
+		text-align:center;
+		padding:.8em 0 0 0;
+		line-height:1.6;
+	}
+	.home .flex-caption h2 em{display:block;}
+	.home .flex-caption h2 i{display:block;font-size:90%;font-weight:300;}
+	.home .flex-caption a {}
+	/* Legal */
+	.flexslider .slides > li.slide_legal {}/* Alçada gran big_screens = height:660px;*/
+	.slide_legal .flex-caption div {}
+	.slide_legal .flex-caption div span h3 {}
+	/**/
+	/* MAIN //***************************************************************************
+	*************************************************************************************/
+	/**/
+	/* MODULO AVISO LEGAL -> ***********************************************************/
+	#legal_section{}
+	#legal_section div article.col_4-3{ width:96%;}
+	#legal_section .box section{}
+	/* FINAL AVISO LEGAL ***************************************************************/
+	/**/
+	/* MODULO FORM -> **********************************************************/
+	/* TO DO: 
+	*/ 
+	#form_wrap{}
+	#form_wrap.box > header{padding:.6em 4%;}
+	#form_wrap.box > section{padding:1em 4%;}
+	#form{}
+	#form ul{}
+	#form ul li{}
+	/*  Form Input Icons */
+	#form ul li{}
+	#form ul li:before{}
+	#form ul li.form_nombre:before{}
+	#form ul li.form_mail:before{}
+	#form ul li.form_telf:before{}
+	#form ul li.form_consulta:before{}
+	#form ul li.form_honey:before{}
+	#form ul li.form_bttn:before{}
+	/* honeypot */
+	#form ul li.form_honey{} 
+	/* bttn */
+	#form ul li.form_bttn{} 
+	/* labels and error messages */
+	#form label{} /*display:block;*/
+	#form .error label{} 
+	#form .valid label{} 
+	/* Missatge d'error */
+	#form label span{}
+	/* Inputs */
+	#form input{}
+	#form input:focus{}
+	/* Validation */
+	#form .error input{}
+	#form .valid input{}
+	#form ul li.error:before{}
+	#form ul li.valid:before{}
+	/*  Form Input Icons */
+	#form input{}
+	/*  Form Input Button */
+	#form ul li.form_bttn input.button{width:33%;}
+	#form ul li.form_bttn input.button:hover{}
+	#form ul li.form_bttn input.button-primary{}
+	#form ul li.form_bttn input.button-primary:hover{}
+	/* Form Loader */
+	#form ul li.form_bttn #form_loader{}
+	#form ul li.form_bttn #form_loader img{}
+	/*  Form Input Textarea */
+	#form textarea{}
+	#form textarea:focus{}
+	/* Form Placeholders */
+	::-webkit-input-placeholder{}
+	:-moz-placeholder{}
+	::-moz-placeholder{}
+	:-ms-input-placeholder {}
+	:focus::-webkit-input-placeholder{}
+	:focus:-moz-placeholder{}
+	:focus::-moz-placeholder{}
+	:focus:-ms-input-placeholder{}
+	.error ::-webkit-input-placeholder {}
+	.error :-moz-placeholder {}
+	.error ::-moz-placeholder {}
+	.error :-ms-input-placeholder {}
+	.error :focus::-webkit-input-placeholder {}
+	.error :focus:-moz-placeholder {}
+	.error :focus::-moz-placeholder {}
+	.error :focus:-ms-input-placeholder {}
+	.error ::-webkit-input-placeholder {}
+	.error :-moz-placeholder {}
+	.error ::-moz-placeholder {}
+	.error :-ms-input-placeholder {}
+	.error :focus::-webkit-input-placeholder {}
+	.error :focus:-moz-placeholder {}
+	.error :focus::-moz-placeholder {}
+	.error :focus:-ms-input-placeholder {}
+	/* Form placeholers js plugin */
+	.placeholder{}
+	#form input:focus .placeholder{}
+	.valid .placeholderFocus{}
+	.error .placeholderFocus{}
+	/* Form Status Messages */
+	#form_wrap .box{}
+	#form_wrap .box section{}
+	#form_wrap .box-success section p{}
+	#form_wrap .box-error section p{}
+	/* Form condicionesd legales */
+	#form_wrap footer{}
+	/* FINAL FORM ***************************************************************/
+	/**/
+	/* MODULO CONTRATACION -> ********************************************************/
+	/* TO DO: 
+	   > 
+	*/
+	/*Form*****************************/
+	#contratacion_form{padding:1em;}
+	/*Form > Header*/
+	#contratacion_form header{}
+	#contratacion_form header h1{}
+	#contratacion_form header p{}
+	/*Form > Messages*/
+	/* Layout no Form */
+	#contratacion_form.noform{}
+	#contratacion_form.noform header{}
+	#contratacion_form.noform header h1{}
+	#contratacion_form.noform header h1 .fa{}
+	#contratacion_form.noform.header p{}
+	/*ERROR*/
+	#contratacion_form.noform.noform_error>header h1{}
+	#contratacion_form.noform.noform_error>header h1 .fa{}
+	#contratacion_form.noform.noform_error>section{}
+	#contratacion_form.noform.noform_error>section p{}
+	#contratacion_form.noform.noform_error>section p b{}
+	/*success*/
+	#contratacion_form.noform.noform_success>header h1{}
+	#contratacion_form.noform.noform_success>header h1 .fa{}
+	#contratacion_form.noform.noform_success>section{}
+	#contratacion_form.noform.noform_success>section .msg{}
+	#contratacion_form.noform.noform_success>section>article{}
+	#contratacion_form.noform.noform_success>section h1{}
+	#contratacion_form.noform.noform_success>section h2{}
+	#contratacion_form.noform.noform_success>section p{}
+	#contratacion_form.noform.noform_success>section p em{}
+	#contratacion_form.noform.noform_success>section p b{}
+	/* Layout form msg */
+	/*Default*/
+	#contratacion_form .msg{}
+	#contratacion_form .msg p{}
+	#contratacion_form .msg p .fa{}
+	/*Error*/
+	#contratacion_form .msg.msg-error{}
+	#contratacion_form .msg.msg-error p{}
+	#contratacion_form .msg.msg-error p .fa{}
+	/*Form > Sections*/
+	#contratacion_form section{}
+	#contratacion_form section.wrap_readmore{}
+	#contratacion_form section .clearboth{}
+	/*Form > Sections > header */
+	#contratacion_form section>header{padding:8px 8px 8px 2%;}
+	#contratacion_form section>header h2{font-size:1.1em;}
+	#contratacion_form section>header p{}
+	/*Readmore*/
+	#contratacion_form section.wrap_readmore>header{padding:8px 64px 8px 2%;}
+	#contratacion_form section.wrap_readmore>header:hover{}
+	#contratacion_form section.wrap_readmore>header .readmore{}
+	#contratacion_form section.wrap_readmore>header:hover .readmore{}
+	#contratacion_form section.wrap_readmore>header .readmore .readmore_button{}
+	#contratacion_form section.wrap_readmore>header .readmore .readmore_button .fa{}
+	#contratacion_form section.wrap_readmore>header:hover .readmore .readmore_button .fa{}
+	/* Readmore open */
+	#contratacion_form section.wrap_readmore.readopen>header{}
+	#contratacion_form section.wrap_readmore.readopen>header:hover{}
+	#contratacion_form section.wrap_readmore.readopen>header>.readmore{}
+	#contratacion_form section.wrap_readmore.readopen>div.readmore_content{}
+	/*Form > Sections > fields */
+	#contratacion_form section>div>ul{padding:.6em 0 0 2%;}
+	#contratacion_form section>div>ul li{}
+	#contratacion_form section>div>ul li.form_li_info{}
+	#contratacion_form section>div>ul li.form_li_info .fa{}
+	/*Datos*/
+	#contratacion_form section>div>ul#form_personal{}
+	#contratacion_form section>div>ul#form_personal li{width:48%; margin-right:1.9%;}
+	/*Tematica*/
+	#contratacion_form section>div>ul#form_tematica{}
+	#contratacion_form section>div>ul#form_tematica li{width:31.3%; margin-right:2%;}
+	#contratacion_form section>div>ul#form_tematica li.form_li_info{} 
+	#contratacion_form section>div>ul#form_tematica li .fa{}
+	#contratacion_form section>div>ul#form_tematica li.form_li_info .fa{}
+	/*Autores*/
+	#contratacion_form section>div>ul#form_autor{}
+	#contratacion_form section>div>ul#form_autor li{width:31.3%; margin-right:2%;}
+	#contratacion_form section>div>ul#form_autor li.form_li_info{} 
+	#contratacion_form section>div>ul#form_autor li .fa{}
+	#contratacion_form section>div>ul#form_autor li.form_li_info .fa{}
+	#contratacion_form section>div>ul#form_autor li input[type="checkbox"]:checked + label,
+	#contratacion_form section>div>ul#form_autor li input[type="checkbox"]:not(:checked) + label{}
+	#contratacion_form section>div>ul#form_autor li input[type="checkbox"]:checked + label img,
+	#contratacion_form section>div>ul#form_autor li input[type="checkbox"]:not(:checked) + label img{}
+	#contratacion_form section>div>ul#form_autor li input[type="checkbox"]:not(:checked) + label img{}
+	#contratacion_form section>div>ul#form_autor li input[type="checkbox"]:not(:checked) + label:hover img,
+	#contratacion_form section>div>ul#form_autor li input[type="checkbox"]:not(:checked):focus + label img{}
+	#contratacion_form section>div>ul#form_autor li input[type="checkbox"]:checked + label img{}
+	#contratacion_form section>div>ul#form_autor li input[type="checkbox"]:checked + label:hover img,
+	#contratacion_form section>div>ul#form_autor li input[type="checkbox"]:checked:focus + label img{}
+	#contratacion_form section>div>ul#form_autor li input[type="checkbox"]:checked + label:before,
+	#contratacion_form section>div>ul#form_autor li input[type="checkbox"]:not(:checked) + label:before{}
+	/*Servicios*/
+	#contratacion_form section>div>ul#form_servicios{}
+	#contratacion_form section>div>ul#form_servicios li{width:48%; margin-right:1.9%;}
+	#contratacion_form section>div>ul#form_servicios li input[type="checkbox"]:checked + label,
+	#contratacion_form section>div>ul#form_servicios li input[type="checkbox"]:not(:checked) + label{}
+	/*Programacion*/
+	#contratacion_form section>div>ul#form_programacion{}
+	#contratacion_form section>div>ul#form_programacion li{}
+	#contratacion_form section>div>ul#form_programacion li#form_programacion_horario{}
+	#contratacion_form section>div>ul#form_programacion li#form_programacion_horario span{width:31.3%; margin-right:2%;}
+	#contratacion_form section>div>ul#form_programacion li#form_programacion_horario span:first-child{width:98%;}
+	#contratacion_form section>div>ul#form_programacion li.form_date{width:48%; margin-right:1.9%;}
+	#contratacion_form section>div>ul#form_programacion li.form_date.cal_open{}
+	#contratacion_form section>div>ul#form_programacion li.form_date.cal_open:before{}
+	#contratacion_form section>div>ul#form_programacion li.form_date:after{}
+	#contratacion_form section>div>ul#form_programacion li.form_date input{}
+	#contratacion_form section>div>ul#form_programacion li.form_date label{}
+	/*Comentarios*/
+	#contratacion_form section>div>ul#form_comentarios{padding-top:1em; margin-bottom:1em;}
+	#contratacion_form section>div>ul#form_comentarios li{width:98%;}
+	#contratacion_form section>div>ul#form_comentarios li#fcomentarios{}
+	/*Footer Send+condiciones*/
+	#contratacion_form footer{}
+	#contratacion_form footer ul{}
+	#contratacion_form footer ul li{}
+	#contratacion_form footer ul li.li_bttn_foot{}
+	#contratacion_form footer ul li.li_legal{}
+	#contratacion_form footer ul li.li_legal a{}
+	#contratacion_form footer ul li.li_legal a:hover{}
+	/**/
+	/* MODULO QUE OPFRECEMOS -> ********************************************************/
+	/* TO DO: Canviar libros -> autores
+	   > 
+	*/
+	#queofrecemos{}
+	#queofrecemos header{text-align:center;margin:0 20% 1.8em 20%;}
+	#queofrecemos header h1{font-size:1.8em; line-height:1.8;}
+	#queofrecemos section{}
+	#queofrecemos section ul{}
+	#queofrecemos section ul li{clear:none; float:left; width:39.9%; margin:0 5% 2em 5%;}
+	.home #queofrecemos section ul li#queofrecemos_libros{}
+	.home #queofrecemos section ul li#queofrecemos_autores{}
+	.home #queofrecemos section ul li#queofrecemos_planificacion{clear:both; width:60%; margin:0 19% 2em 20%;}
+	.home #queofrecemos section ul li#queofrecemos_asesor{clear:both;}
+	.home #queofrecemos section ul li#queofrecemos_team{float:left; margin:0 5% 2em 5%;}
+	#queofrecemos section ul li#queofrecemos_libros{}
+	#queofrecemos section ul li#queofrecemos_autores{}
+	#queofrecemos section ul li#queofrecemos_planificacion{}
+	#queofrecemos section ul li#queofrecemos_asesor{}
+	#queofrecemos section ul li#queofrecemos_team{float:none;margin:0 auto;}
+	#queofrecemos section ul li span{text-align:center;}
+	#queofrecemos section ul li span img{float:none; display:block;width:6em; margin:0 auto .4em auto;}
+	#queofrecemos section ul li span p{padding-top:.6em; font-size:.9em;}
+	#queofrecemos section ul li span p em{}
+	#queofrecemos footer{clear:both;margin:0 20%;}
+	#queofrecemos footer a{}
+	/* FINAL MODULO QUE OPFRECEMOS *****************************************************/
+	/**/
+	/**/
+	/* MODULO GMAPS -> ****************************************************************/
+	/* TO DO: 
+	   > 3 mides de mapa amb MediaQueries -> .dummy_gmaps
+	*/
+	.maps_responsive{}
+	.maps_responsive .img_frame{display:block;}
+	.maps_responsive .container_gmaps {}
+	.maps_responsive .container_gmaps.loading_maps {}
+	/*.maps_responsive .dummy_gmaps { padding-top: 20%;}*//*Big Map 5:1 1920x384 */
+	.maps_responsive .dummy_gmaps {padding-top: 66%;}/* Medium Map 5:2  960x384 */
+	/*.maps_responsive .dummy_gmaps {}Small Map 3:2 576x384 */ 
+	.maps_responsive .element_gmaps {}
+	.maps_responsive .element_gmaps a{}
+	.maps_responsive .element_gmaps a img {}
+	.maps_responsive .element_gmaps a img.big_screen {}
+	.maps_responsive .element_gmaps a img.mid_screen {}
+	.maps_responsive .element_gmaps a img.small_screen {display:block;}
+	.maps_responsive .element_gmaps iframe{}
+	/* FINAL GMAPS ********************************************************************/
+	/**/
+	/**/
+	/* MODULO VIDEO -> ****************************************************************/
+	.video_responsive{}
+	.video_responsive div .container_video {}
+	.video_responsive div .container_video iframe, .video_responsive div .container_video object, .video_responsive div .container_video embed {}
+	/* ESTILOS CONCRETOS */
+	#video_00 .wrap_content{}
+	/* FINAL MODULO VIDEO **************************************************************/
+	/**/
+	/* MODULO GALERÍA COLORBOX -> *****************************************************/
+	/* TO DO: 
+	   > 
+	*/
+	/* Layout de la Galeria */
+	.gallery_module{}
+	.gallery_module div{} 
+	.gallery_module div a{}
+	.gallery_module div a{ width:22.5%; margin:.6em 0 0 2%;}/* Per media quieries - > Aqui 4 cols // Marge -> 2%*/
+	.gallery_module div a img{}
+	/* Colorbox */
+	#cboxOverlay{}
+	#colorbox{}
+	.cboxIframe{}
+	#cboxError{}
+	#cboxLoadingOverlay, #cboxLoadingGraphic{}
+	/* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
+	#cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {}
+	/* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
+	#cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {}
+	#cboxSlideshow{}
+	#cboxPrevious, #cboxPrevious:visited, #cboxNext, #cboxNext:visited{}
+	#cboxPrevious:active, #cboxPrevious:hover, #cboxNext:active, #cboxNext:hover{}
+	#cboxPrevious{}
+	#cboxPrevious:before{}
+	#cboxNext{}
+	#cboxNext:after{}
+	#cboxCurrent{}
+	#cboxTitle{}
+	#cboxClose, #cboxClose:visited{}
+	#cboxClose:hover, #cboxClose:active{}
+	#cboxClose:after{}
+	.cboxPhoto{}
+	.cboxIframe{}
+	/* FINAL GALERIA COLORBOX *********************************************************/
+	/**/
+	/* MODULO RANDOM HTML -> **********************************************************/
+	.html_module{}
+	.html_module .html_img{}
+	.html_module .img_frame{}
+	/* FINAL RANDOM HTML ***************************************************************/
+	/**/
+	/* MODULO TEST COLS -> *************************************************************/
+	#test_cols article {}
+	#test_cols article h3{}
+	#test_cols aside {min-height:160px;}
+	#test_cols aside.box {min-height:250px;}
+	#test_cols aside header{}
+	#test_cols aside section{}
+	/* MODULO TIENDA -> ***************************************************************/
+	#module_tienda{}
+	#module_tienda .col_3-1 {margin-right:0;}
+	#module_tienda .col_3-1 img{max-height:320px; max-width:100%; width:auto; height:auto;}
+	#module_tienda .col_3-2{}
+	#module_tienda .col_3-2:nth-of-type(1) {}
+	#module_tienda .col_3-2:last-child {width:58%;}
+	/* MODULO PROYECTOS -> ************************************************************/
+	#module_proyectos{}
+	#module_proyectos .wrap_readmore .readmore_button .readmore{ width:40%;margin:.6em 0 .6em 30%;}
+	/* MODULO EMPRESA -> ************************************************************/
+	#module_empresa{}
+	#module_empresa section h2{}
+	#module_empresa section p{}
+	#module_empresa .col_half h2{}
+	#module_empresa .col_half h2:after {}
+	#module_empresa ul{}
+	#module_empresa ul li{}
+	#module_empresa ul li span.fa{}
+	/* MODULO LOCALIZACION -> ************************************************************/
+	#module_localizacion{}
+	#module_localizacion article.mod_contact_00{width:35%; margin:0 0 0 2%;}
+	#module_localizacion article.mod_contact_00 h3{width:100%; margin:0 0 .8667em; float:none;}
+	#module_localizacion article.mod_contact_00 h3:last-child{width:100%; clear:both; margin-top: 0;}
+	#module_localizacion article.mod_contact_01{width:35%; margin:0 0 0 2%;}
+	#module_localizacion article.mod_contact_02{width:59%;}
+	#module_localizacion article.mod_contact_03{}
+	#module_localizacion article.mod_contact_04{width:59%; margin:0 0 1.6em 2%;}
+	/* MODULO CONTACTO -> ************************************************************/
+	#module_contacto{}
+	#module_contacto article.mod_contact_00{width:35%; margin:0 0 0 2%;}
+	#module_contacto article.mod_contact_00 h3{width:100%; margin:0 0 .8667em; float:none;}
+	#module_contacto article.mod_contact_00 h3:last-child{width:100%; clear:both; margin-top: 0;}
+	#module_contacto article.mod_contact_01{width:35%; margin:0 0 0 2%;  border-top:1px solid #783934; padding-top:.6em;}
+	#module_contacto article.mod_contact_02{width:59%; border-top:1px solid #783934; padding-top:.6em;}
+	#module_contacto article.mod_contact_03{}
+	#module_contacto article.mod_contact_04{width:59%; margin:0 0 1.6em 2%;}
+	/**/
+	/* MODULO SOCIALFEED -> ***********************************************************/
+	#social-feed{}
+	#social-feed div {}
+	#social-feed div div{}
+	#social-feed div div article a.social-feed-loader{}
+	#social-feed div div article a.social-feed-loader{}
+	#social-feed div div article a.calltoact{}
+	#social-feed div div article a.calltoact:hover{}
+	#social-feed div div article a.calltoact{}
+	#social-feed div div article a.social-feed-loader{}
+	#social-feed div div article span.social-feed-loader-js{}
+	#fb_feed_loader_html{}
+	#tw_feed_loader_html{}
+	/* FINAL SOCIALFEED ***************************************************************/
+	/**/
+	/* SECCION PREFOOTER MOREINFO *********************************/
+	#main_moreinfo{}
+	#main_moreinfo #form_wrap{}
+	#main_moreinfo #form_wrap > header{}
+	#main_moreinfo #form_wrap > header h4{display:inline;}
+	#main_moreinfo #form_wrap > header p{display:inline; padding:0 0 0 .3em;}
+	#main_moreinfo #form_wrap > header .readmore{}
+	#main_moreinfo #form_wrap > header:hover .readmore{}
+	#main_moreinfo #form_wrap > header .readmore .readmore_button{}
+	#main_moreinfo #form_wrap > header .readmore .readmore_button i{margin:.1em .6em 0 0;}
+	#main_moreinfo #form_wrap > header:hover .readmore .readmore_button i{}
+	#main_moreinfo #form_wrap > header .readmore.readopen{}
+	#main_moreinfo #form_wrap > section{}
+	#main_moreinfo #form{}
+	#main_moreinfo #form ul{margin:0;}
+	#main_moreinfo #form ul li{width:46.8%; float:left; margin:0 1% 1em 1%;}
+	/*  Form Input Icons */
+	#main_moreinfo #form ul li:before{}
+	/* bttn */
+	#main_moreinfo #form ul li.form_bttn{text-align:right; margin:0 1% 1em 1%;} 
+	/* labels and error messages */
+	#main_moreinfo #form label{ display:none;} /*display:block;*/
+	#main_moreinfo #form .error label, #form .error label span i{} 
+	#main_moreinfo #form .valid label, #form .valid label span i{} 
+	/* Missatge d'error */
+	#main_moreinfo #form label span{}
+	/* Inputs */
+	#main_moreinfo #form input[type='text']{}
+	#main_moreinfo #form input[type='text']:focus{}
+	/* Validation */
+	#main_moreinfo #form .error input{}
+	#main_moreinfo #form .valid input{}
+	#main_moreinfo #form ul li:before{}
+	#main_moreinfo #form ul li.error:before{}
+	#main_moreinfo #form ul li.valid:before{}
+	/*  Form Input Icons */
+	#main_moreinfo #form input[type='text']{}
+	/*  Form Input Button */
+	#main_moreinfo #form ul li.form_bttn input.button{
+		width:63.9%; font-size:1em;
+		border:1px solid #666; color: #FFF;  
+		background:#38af37;
+		box-shadow: inset 2px 2px 0 rgba(255, 255, 255, 0.6), 2px 2px 0 rgba(0, 0, 0, 0.3);
+	}
+	#main_moreinfo #form ul li.form_bttn input.button:hover{
+		border:1px solid #555; color: #555; 
+		background:#DDD;
+		box-shadow: inset 2px 2px 0 rgba(255, 255, 255, 1), 2px 2px 0 rgba(0, 0, 0, 0.2);
+	}
+	#main_moreinfo #form ul li.form_bttn input.button:active{
+		position:relative; top:-1px;
+		border-top-color:#222;border-left-color:#222;
+		color: #888;  
+		box-shadow: inset 2px 2px 0 rgba(0, 0, 0, 0.2);
+	}
+	/* Form Loader */
+	#main_moreinfo #form ul li.form_bttn input.button.button-sending, #main_moreinfo #form ul li.form_bttn input.button.button-sending:hover{}
+	#main_moreinfo #form ul li.form_bttn #form_loader{left:70%; top:20%;}
+	#main_moreinfo #form ul li.form_bttn #form_loader img{}
+	/*  Form Input Textarea */
+	/* Form placeholers js plugin */
+	#main_moreinfo .placeholder{}
+	#main_moreinfo #form input:focus .placeholder{}
+	#main_moreinfo .valid .placeholderFocus{}
+	#main_moreinfo .error .placeholderFocus{}
+	/* Form Status Messages */
+	#main_moreinfo #form_wrap .box{}
+	#main_moreinfo #form_wrap .box-success{}
+	#main_moreinfo #form_wrap .box-error{}
+	#main_moreinfo #form_wrap .box .fa{}
+	#main_moreinfo #form_wrap .box-success h4{}
+	#main_moreinfo #form_wrap .box-success p{display:block; margin-left:1.7em;}
+	#main_moreinfo #form_wrap .box-error h4{}
+	#main_moreinfo #form_wrap .box-error p{display:block; margin-left:1.7em;}
+	#main_moreinfo #form_wrap section .box {}
+	#main_moreinfo #form_wrap section .box p{}
+	/* FOOTER  **********************************************************************/
+	#footer {}
+	/* Tipos Footer */
+	#footer {}
+	#footer b, #footer em{}
+	#footer a, #footer a:visited{}
+	#footer a:hover{}
+	#footer .calltoact{}
+	#footer .calltoact:hover{}
+	/* Globals */
+	#footer>ul{/*padding:0 16px;*/}
+	#footer>ul>li{}
+	#footer>ul>li:first-child{}
+	#footer>ul>li.col_2-1:first-child{}
+	#footer>ul>li:last-child{}
+	#footer>ul>li.col_2-1:last-child{}
+	#footer>ul>li>span{}
+	#footer>ul>li>span a{}
+	#footer>ul>li>span a i{}
+	#footer>ul>li>span a:hover, #footer ul>li>span a:active{}
+	#footer>ul>li>span a:hover i, #footer ul>li>span a:active i{}
+	/* SECCION EMPRESA ***************************/
+	#footer h5{line-height:2.2em; font-size:1.1em;}
+	#footer h5 em{}
+	#footer .footer_mail a{}
+	#footer .footer_mail a i{}
+	#empresa_datos{}
+	#empresa_datos p{}
+	#empresa_datos a, #empresa_datos a:visited{}
+	#empresa_datos a:hover{}
+	#empresa_datos a.zarana{}
+	#empresa_datos a img{width:9em; margin:.6em auto .8em auto;}
+	/* SOCIALLINKS ***************************/
+	/* Sociallinks */
+	#sociallinks{}
+	#sociallinks li{}
+	#sociallinks li a{}
+	#sociallinks li a .fa{}
+	#sociallinks li a .fa:before{}
+	#sociallinks li a:hover{}
+	#sociallinks li a:hover .fa{}
+	/**/
+	/* SECCION SUBFOOTER *********************************/
+	#subfooter{}
+	#subfooter a{}
+	#subfooter a .fa{}
+	#subfooter a:hover, #footer a:active{}
+	#subfooter a:hover .fa, #footer a:active .fa{}
+	/* LOGIN */
+	#subfooter #footer_login{}
+	/* BOTO TORNAR A DALT *************************/
+	#subfooter #totop_wrap{}
+	#subfooter #totop_wrap a#to_top, #totop_wrap a#to_top:visited{}
+	#subfooter #totop_wrap a#to_top .fa, #totop_wrap a#to_top:visited .fa{}
+	#subfooter #totop_wrap a#to_top:hover{}
+	#subfooter #totop_wrap a#to_top:hover .fa{}
+	/* SocialShare *****/
+	#subfooter #socialshare
+	#socialshare{}
+	#socialshare li{}
+	/*Sharebutton*/
+	#socialshare #share_bttn {}
+	#socialshare #share_bttn:hover {}
+	#socialshare #share_bttn.open, #socialshare #share_bttn.open:hover {}
+	#socialshare #share_bttn.open:active {}
+	/*ShareLoaderText*/
+	#socialshare #share_bttn #share_loader_text{}
+	#socialshare #share_bttn #share_loader_text .small_screen{}
+	#socialshare #share_bttn #share_loader_text .big_screen{}
+	/*ShareLoaderSpinner*/
+	#socialshare #share_bttn #share_loader_spinner{}
+	#socialshare #share_bttn #share_loader_spinner img{}
+	/*Share Loader*/
+	#socialshare #share_bttn #share_loader {}
+	#socialshare #share_bttn #share_loader span.share_loader_bttn {}
+	#socialshare #share_bttn #share_loader span.share_loader_bttn#share_loader_bttn_fb{} /*Individuals*/
+	#socialshare #share_bttn #share_loader span.share_loader_bttn#share_loader_bttn_fb .fb-share-button{} 
+	#socialshare #share_bttn #share_loader span.share_loader_bttn .fb_iframe_widget, #socialshare #share_bttn #share_loader span.share_loader_bttn .fb_iframe_widget span, #socialshare #share_bttn #share_loader span.share_loader_bttn .fb_iframe_widget span iframe[style]{}
+	/*Share PHP*/
+	#socialshare #share_php {}
+	#socialshare #share_php a{ font-size:74%;}
+	/* BOTO TORNAR A DALT *****/
+	#totop_wrap{}
+	#totop_wrap a#totop, #totop_wrap a#totop:visited{}
+	#totop_wrap a#totop:active, #totop_wrap a#totop:hover{}
+	/**/
+	/* WARNINGS ******************************************/
+	#warnings{}
+	#warnings em{}
+	#warnings article{}
+	/* NO-JAVASCRIPT */
+	#warnings article#nojs_warning{}
+	#warnings article#nojs_warning a{}
+	#warnings article#nojs_warning a:hover{}
+	/* OLD IE */
+	#warnings article#oldie_warning{}
+	#warnings article#oldie_warning a{}
+	#warnings article#oldie_warning a:hover{}
+	/**/
+	/* COOKIES ******************************************/
+	.cookie_spacer{}
+	#cookie_warning{}
+	#cookie_warning article{}
+	#cookie_warning a, #cookie_warning span{}
+	#cookie_warning a:hover, #cookie_warning:hover span{}
+	/* FINAL FOOTER *******************************************************************/
+	/**/
+	/* CSS WORDPRESS ******************************************************************/
+	/* ********************************************************************************/
+	#main, #main_aside, #main_contacto {}
+	#main_full {}
+	#container {}
+	#content {}
+	#content>section, #content>article {}
+	#content>section#indexloop.loop_results_wrap {text-align:center;}
+	.page_sidebar #content{}
+	.page_sidebar #content>section, .page_sidebar #content>article {}
+	.page_sidebar #content>section.loop_results_wrap {}
+		/* TODO: POST TYPES */
+	.page_sidebar #content>article.post {}
+	/* LOOPS DE POSTS ******************************************************************/
+	.loop_results_wrap{}
+	.loop_results_wrap .loop_results{margin:.3em;}
+	#categoryloop.loop_results_wrap, .page-template-archive-php .loop_results_wrap{}
+	#categoryloop.loop_results_wrap .loop_results.loop_results_featured, .page-template-archive-php .loop_results_wrap .loop_results.loop_results_featured{width:47.9%;}
+	.loop_results_wrap .loop_results a{}
+	.loop_results_wrap .loop_results a:hover{}
+	/* Links Categories */
+	.loop_results_wrap .loop_results a.loop_autores_cat{
+		padding:0 0 0 1em;
+		font-size:1em; line-height:2;
+	}
+	.loop_results_wrap .loop_results a.loop_autores_cat:hover{
+		padding:0 0 0 1.6em;
+	}
+	.loop_results_wrap .loop_results a.loop_autores_cat i.fa{}
+	/* Links Autores */
+	.loop_results_wrap .loop_results a.loop_autores_link{}
+	.loop_results_wrap .loop_results a.loop_autores_link:hover{}
+	.loop_results_wrap .loop_results a.loop_autores_link img{
+		padding:0.6em;	margin:.6em;
+		width:8.2em;	height:auto;
+	}
+	.loop_results_wrap .loop_results a.loop_autores_link:hover img{}
+	/* Compact */
+	.loop_results_wrap .loop_results.loop_results_compact{width:9.6em;}
+	.loop_results_wrap .loop_results.loop_results_compact a{}
+	.loop_results_wrap .loop_results.loop_results_compact a.loop_autores_cat{}
+	.loop_results_wrap .loop_results.loop_results_compact a.loop_autores_link{padding-top:.6em;}
+	.loop_results_wrap .loop_results.loop_results_compact a img{margin: 0 .6em .6em .6em;}
+	.loop_results_wrap .loop_results.loop_results_compact a em{
+		height:3.4em;
+		padding:0.3em 0.1em;
+		font: normal 1em/1 'Bree Serif', serif;
+	}
+	.loop_results_wrap .loop_results.loop_results_compact a:hover em{}
+	/* Featured */
+	.loop_results_wrap .loop_results.loop_results_featured{width:22em;}
+	.loop_results_wrap .loop_results.loop_results_featured a{text-align:left; }
+	.loop_results_wrap .loop_results.loop_results_featured a.loop_autores_cat{}
+	.loop_results_wrap .loop_results.loop_results_featured a.loop_autores_link{padding-top:0; line-height:1.3;}
+	.loop_results_wrap .loop_results.loop_results_featured a img{float:left; margin:.6em 1em .6em .6em;}
+	#categoryloop.loop_results_wrap .loop_results.loop_results_featured a img{float:left; margin:.6em .5em .6em .6em; padding:0.4em; width:5.6em;}
+	.loop_results_wrap .loop_results.loop_results_featured a em{
+		height: auto; padding:0.6em 0.3em 0.3em 0;
+		background: none; border-top: none;
+		font: normal 1.2em/1 'Bree Serif', serif;
+		text-align:left;	color: #048F3E;
+	}
+	#categoryloop.loop_results_wrap .loop_results.loop_results_featured a em{font: normal 1em/1 'Bree Serif', serif;}
+	.loop_results_wrap .loop_results.loop_results_featured a:hover em{}
+	.loop_results_wrap .loop_results.loop_results_featured a i{
+		display:block;	padding:0 .6em 0 0; 
+		font-size:.96em;
+	}
+	#categoryloop.loop_results_wrap .loop_results.loop_results_featured a i{
+		display:block; overflow:hidden; padding:0 .6em 0 0; margin:0; max-height:5em;  
+		font-size:.86em;line-height:1.2;text-align:left; 
+	}
+	.loop_results_wrap .loop_results.loop_results_featured a:hover i{}
+	.loop_results_wrap .loop_results.loop_results_featured footer{
+		display:block;
+		height:3.4em; padding:0 .3em;
+		font-size:1em; line-height:1;
+		
+	}
+	.loop_results_wrap .loop_results.loop_results_featured footer a{
+		padding:.3em 0 .3em .3em;
+		font-size:.8em;	line-height:1.4;
+	}
+	.loop_results_wrap .loop_results.loop_results_featured footer a:hover{}
+	/* List */
+	#categoryloop.loop_results_wrap .loop_results.loop_results_featured.loop_results_list, .loop_results_wrap .loop_results.loop_results_featured.loop_results_list {width:47.9%;}	
+	/* Expand */
+	.loop_results_wrap .loop_results.loop_results_featured.loop_results_expand{width:96%;}
+	.loop_results_wrap .loop_results.loop_results_featured.loop_results_expand a{}
+	.loop_results_wrap .loop_results.loop_results_featured.loop_results_expand a.loop_autores_link{padding-top:0;}
+	.loop_results_wrap .loop_results.loop_results_featured.loop_results_expand a.loop_autores_link:hover{}
+	.loop_results_wrap .loop_results.loop_results_featured.loop_results_expand a.loop_autores_cat{line-height:2;}
+	.loop_results_wrap .loop_results.loop_results_featured.loop_results_expand a.loop_autores_link img{margin:.6em 1em .2em .6em; width:8.2em;}
+	.loop_results_wrap .loop_results.loop_results_featured.loop_results_expand a.loop_autores_link em{font-size:1.3em; padding-bottom:.4em;}
+	.loop_results_wrap .loop_results.loop_results_featured.loop_results_expand a.loop_autores_link:hover em{}
+	.loop_results_wrap .loop_results.loop_results_featured.loop_results_expand a.loop_autores_link i{font-size:1em; line-height:1.4; max-width:32em; padding-bottom:.4em;}
+	.loop_results_wrap .loop_results.loop_results_featured.loop_results_expand a.loop_autores_link:hover i{display:block;}
+	.loop_results_wrap .loop_results.loop_results_featured.loop_results_expand a.loop_autores_link b{
+		padding:0 2em .6em 0; font-size:.9em; line-height:1.4em; margin-left:11em;
+	}
+	.loop_results_wrap .loop_results.loop_results_featured.loop_results_expand footer{}
+	.loop_results_wrap .loop_results.loop_results_featured.loop_results_expand footer a{}
+	.loop_results_wrap .loop_results.loop_results_featured.loop_results_expand footer a.loop_results_expand_footer_cat{}
+	.loop_results_wrap .loop_results.loop_results_featured.loop_results_expand footer a:hover{}
+	/* Index Loop Filter */
+	.loop_filter_cats{padding:.6em .6em; text-align:center;}
+	.loop_filter_cats br{}
+	.loop_filter_cats em{}
+	.loop_filter_cats a.button{margin:.3em .4em .3em 0;}
+	.loop_filter_cats a.button .fa{}
+	.loop_filter_cats a.button .fa.fr{}
+	.loop_filter_cats a.button:hover{}
+	.loop_filter_cats a.button:hover .fa{}
+	.loop_filter_cats a.button:hover .fa.fr{}
+	.loop_filter_cats a.button:active{}
+	.loop_filter_cats a.button:active .fa{}
+	/* Index Loop Filter Home */
+	.loop_filter_cats.loop_filter_cats-home a.button.fr{float:right!important; margin-right:0;}
+	/* Paginacio Resultats */
+	.page-numbers{}
+	.page-numbers li{}
+	.page-numbers li a{}
+	.page-numbers li a:hover{}
+	/* CONTENIDOR DE POST **************************************************************/
+	#content{}
+	#content .loop_expand_wrap.lastnews_page{}
+	/* Search No Results */
+	#content .post.noresults{}
+	#content .post.noresults h1{}
+	#content .post.noresults p{}
+	#content .post.noresults #noresults-searchform{padding:0 1em;}
+	#content .post.noresults #noresults-searchform input[type='text']{width:70%;}
+	#content .post.noresults #noresults-searchform input[type='text']:focus{}
+	#content .post.noresults #noresults-searchform input[type='text'].ui-autocomplete-loading{}
+	#content .post.noresults #noresults-searchform .ui-helper-hidden-accessible{}
+	#content .post.noresults #noresults-searchform #noresults-searchsubmit{ width:27%; margin-left:1.9%; padding:4px .9em 2px .9em; }
+	/* 404 */
+	#content .post.error404{}
+	#content .post.error404 p{}
+	#content .post.error404 #error404-searchform{padding:0 1em;}
+	#content .post.error404 #error404-searchform input[type='text']{width:70%;}
+	#content .post.error404 #error404-searchform input[type='text']:focus{}
+	#content .post.error404 #error404-searchform input[type='text'].ui-autocomplete-loading{background-position: 98% center;}
+	#content .post.error404 #error404-searchform .ui-helper-hidden-accessible{}
+	#content .post.error404 #error404-searchform #error404-searchsubmit{width:27%; margin-left:1.9%; padding:4px .9em 2px .9em;}
+	/* Títol Pag*/
+	#content .title-wrap{}
+	#content .title-wrap h1, #content .title-wrap h2, #content .title-wrap h3{
+		font-size:1.3em;
+		line-height:1.4444em;
+	}
+	#content .title-wrap h1 em, #content .title-wrap h2 em, #content .title-wrap h3 em{}
+	#content .title-wrap .icon-wrap{}
+	#content .title-wrap a, #content .title-wrap a:visited{}
+	#content .title-wrap a:hover, #content .title-wrap a:active{}
+	#content .title-wrap a:active{padding-top:.1em;}
+	/* CONETINDOR del POST */
+	.entry-content{}
+	/* <header> */
+	article.post header.entry-header{padding:1em;}
+	article.post header.entry-header img{height:10em;}
+	/* Header Info */
+	article.post header.entry-header .entry-title-info{}
+	/* Title*/
+	article.post header.entry-header .entry-title-info .entry-title.post_section, article.page .entry-title.post_section{
+		font: 400 1.6em/1.2 'Bree Serif', serif;
+	}
+	.entry-title.post_section a, .entry-title.post_section a:visited{}
+	.entry-title.post_section a:hover, .entry-title.post_section a:active{}
+	.entry-title.post_section a:active{}
+	/* Eslogan */
+	article.post header.entry-header .entry-title-info em{font-size:1.2em;}
+	/* FINAL <header> */
+	/*** FINAL MODUL1 WYSIWYG ******************************************************************/
+	/**/
+	/**/
+	/*** CONT2 MODUL2 WYSIWYG ******************************************************************//
+	/**/
+	/* TODO: Universalitzar aquest model de colors */
+	/* section WYSIWYG */
+	.entry-content .entry-wysiwyg_wrap{}
+	.entry-content .entry-wysiwyg{ font-size:.96em;}
+	.home .entry-content .entry-wysiwyg{padding:0;}
+	.entry-content .entry-wysiwyg h2{padding:0;}
+	/* ENTRY IMATGE DESTACADA*/
+	.entry-content .entry-thumb{}
+	.entry-content .entry-thumb img{}
+	/* CONTENIDO CONTINGUT*/
+	#content .attachment {}
+	/* Links */
+	.entry-content .entry-wysiwyg a, .entry-content .entry-wysiwyg a:visited, .entry-content .entry-wysiwyg li a, .entry-content .entry-wysiwyg li a:visited{}
+	.entry-content .entry-wysiwyg a:hover, .entry-content .entry-wysiwyg a:active, .entry-content .entry-wysiwyg li a:hover, .entry-content .entry-wysiwyg li a:active{}
+	.entry-content .entry-wysiwyg h2.entry-excerpt{}
+	.entry-content .entry-wysiwyg h1, .entry-content .entry-wysiwyg h2, .entry-content .entry-wysiwyg h3, .entry-content .entry-wysiwyg h4, .entry-content .entry-wysiwyg h5, 
+	.entry-content .entry-wysiwyg h a{}
+	.entry-content .entry-wysiwyg h1 a, .entry-content .entry-wysiwyg h2 a, .entry-content .entry-wysiwyg h3 a, .entry-content .entry-wysiwyg h4 a, .entry-content .entry-wysiwyg h5 a{}
+	.entry-content .entry-wysiwyg h6, .entry-content .entry-wysiwyg h6 a{}
+	.entry-content .entry-wysiwyg p{}
+	.entry-content .entry-wysiwyg b, .entry-content .entry-wysiwyg em, .entry-content .entry-wysiwyg strong{}
+	.entry-content .entry-wysiwyg em,.entry-content .entry-wysiwyg strong{}
+	.entry-content .entry-wysiwyg p a{}
+	.entry-content .entry-wysiwyg ul, .entry-content .entry-wysiwyg ol{}
+	.entry-content .entry-wysiwyg ul{}
+	.entry-content .entry-wysiwyg ol{}
+	/* Tags */
+	.entry-wysiwyg-tags{}
+	footer.entry-wysiwyg-tags{text-align:center;}
+	.entry-wysiwyg-tags h1{}
+	.entry-wysiwyg-tags a{}
+	.entry-wysiwyg-tags a.button{}
+	.entry-wysiwyg-tags a.button:hover{}
+	.entry-wysiwyg-tags a.button:active{}
+	/* Links SocialMedia*/
+	.entry-wysiwyg-links{}
+	.entry-wysiwyg-links a{}
+	.entry-wysiwyg-links a.button{}
+	.entry-wysiwyg-links a.button .fa{}
+	.entry-wysiwyg-links a.button .fa.fr{}
+	.entry-wysiwyg-links a.button:hover{}
+	.entry-wysiwyg-links a.button:hover .fa{}
+	.entry-wysiwyg-links a.button:hover .fa .fr{}
+	.entry-wysiwyg-links a.button:active{}
+	.entry-wysiwyg-links a.button:active .fa{}
+	/* TODO: Universalitzar aquest model de colors */
+	.entry-wysiwyg-links a.button.button_social_blog:hover{}
+	.entry-wysiwyg-links a.button.button_social_fb:hover{}
+	.entry-wysiwyg-links a.button.button_social_tw:hover{}
+	.entry-wysiwyg-links a.button.button_social_li:hover{}
+	.entry-wysiwyg-links a.button.button_social_gp:hover{}
+	.entry-wysiwyg-links a.button.button_social_yt:hover{}
+	.entry-wysiwyg-links a.button.button_social_ig:hover{}
+	.entry-wysiwyg-links a.button.button_social_pi:hover{}
+	/* Videos*/
+	.entry-wysiwyg-videos{}
+	.entry-wysiwyg-videos h1{}
+	.entry-wysiwyg-videos h1 span{}
+	.entry-wysiwyg-videos section{padding:1em;}
+	.entry-wysiwyg-videos section a{margin:0 2% 1em 2%; width:29.3%; float:left;}
+	.entry-wysiwyg-videos section a.video_link_novideo{}
+	.entry-content .entry-wysiwyg-videos section a img{}
+	.entry-content .entry-wysiwyg-videos section a.video_link_novideo img{}
+	.entry-content .entry-wysiwyg-videos section a:after {}
+	.entry-content .entry-wysiwyg-videos section a.video_link_novideo:after{}
+	.entry-wysiwyg-videos section a:hover{}
+	.entry-content .entry-wysiwyg-videos section a:hover img{}
+	.entry-content .entry-wysiwyg-videos section a.video_link_novideo:hover img{}
+	.entry-content .entry-wysiwyg-videos section a:hover:after {}
+	/* section BOOK */
+	.entry-content .entry-wysiwyg-books{}
+	.entry-content .entry-wysiwyg-books a{}
+	.entry-content .entry-wysiwyg-books a em{}
+	.entry-content .entry-wysiwyg-books a img{}
+	.entry-content .entry-wysiwyg-books a:hover{}
+	.entry-content .entry-wysiwyg-books a:hover em{}
+	.entry-content .entry-wysiwyg-books a:hover img{}
+	/*** FINAL MODUL2 WYSIWYG ******************************************************************/
+	/**/
+	/**/
+	/**/
+	/**/
+	/* PAGE TITLES */
+	.page-title span span {}
+	.page-title .meta-nav {}
+	/* PAGE HEAD */
+	.hentry {}
+	/* STICKY POSTS */
+	.sticky {}
+	/* ENTRY TAGS */
+	.entry-title a {}
+	.entry-title a:hover {}
+	.entry-meta {}
+	.entry-meta a {}
+	.entry-meta a:hover {}
+	.entry-meta abbr {}
+	.entry-utility {}
+	.attach_content .entry-utility {}
+	.entry-utility a {}
+	.entry-utility a:hover {}
+	.entry-utility ul {}
+	.entry-utility li {}
+	.entry-utility li i{}
+	.entry-utility li a{}
+	.entry-utility li a:hover{}
+	.edit-link {}
+	.content-column {}
+	nav.navigation {}
+	/* LINKS PAGE */
+	#links-page, #archives-page {}
+	/* AUTOR INFO*/
+	#author-info {}
+	#author-info .avatar {}
+	/* ENTRY IMAGES*/
+	.entry-content .wp-post-image {}
+	.entry-content img {}
+	.alignleft,	img.alignleft {}
+	.alignright, img.alignright {}
+	.aligncenter, img.aligncenter {}
+	.wp-caption {}
+	.wp-caption img {}
+	.entry-content .wp-caption a img, .entry-content .wp-caption a:visited img {}
+	.entry-content .wp-caption a:hover img {}
+	.entry-content .wp-caption a:active img {}
+	.wp-caption p.wp-caption-text {}
+	.entry-content a img {}
+	.entry-content a:hover img {}
+	.entry-content a:active img {}
+	/* GALLERY ENTRY*/
+	.gallery {}
+	.gallery .gallery-row {}
+	.gallery .gallery-item {}
+	.gallery .gallery-item a{}
+	.gallery .gallery-item a img, .gallery .gallery-item img {}
+	.gallery .gallery-item a:hover img, .gallery .gallery-item:hover img {}
+	.gallery .gallery-item a:active img, .gallery .gallery-item:active img {}
+	.gallery-icon {}
+	.gallery-caption {}
+	/* COMMENTS */
+	.wp-smiley {}
+	#comments {}
+	#comments ol {}
+	#comments-list ul {}
+	#comments-list ul li {}
+	#comments-list ol {}
+	#comments-list li {}
+	#comments-list li .avatar {}
+	#comments-list li.bypostauthor {}
+	#comments-list .thread-odd {}
+	#comments-list .comment-author {}
+	#comments-list .comment-meta {}
+	#comments-list #respond {}
+	#comments-list ul #respond {}
+	.comment-reply-link {}
+	#trackbacks-list .comment-content {}
+	#respond {}
+	#cancel-comment-reply {}
+	/* COMMENTS FORM */
+	.form-section input {}
+	.form-section textarea {}
+	#form-allowed-tags {}
+	#form-allowed-tags p {}
+	#form-allowed-tags span {}
+	.form-submit {}
+	.button, input[type="submit"] {}
+	.button:hover, input[type="submit"]:hover {}
+	/* COMMENTS LIST */
+	.page-link,	.comment-navigation {}
+	.page-link a, .comment-navigation a {}
+	.page-link a:hover,	.comment-navigation a:hover {}
+	.page-link a,.page-link span,.comment-navigation a,	.comment-navigation span {}
+	.paginated-comments-links {}
+	/* Sidebar */
+	.page_sidebar #container{
+	}
+	.page_sidebar #container .aside {}
+	.page_sidebar #container .aside .inner>section{/*padding:2em 4em 2em 2em;*/}
+	/* ASIDE / LATERAL  **********************************************************************/
+	#content .aside {}
+	.aside {}
+	.aside a, .aside a:visited{}
+	.aside a:hover, .aside a:active{}
+	.aside ul,.aside section {}
+	.aside ul ul,.aside section ul {}
+	.aside ul ul li,.aside section ul li {}
+	.aside ul ul ul,.aside section ul ul {}
+	.aside img {}
+	.aside table {}
+	.aside thead,.aside tbody {}
+	.aside th,.aside td {}
+	.aside tfoot tr {}
+	.aside tfoot td {}
+	.aside #searchform input {}
+	/* TAG CLOUD */
+	.widget_tag_cloud {}
+	/* SEARCH */
+	#searchsubmit {}
+	/* WIDGET PRIMARY */
+	#primary {}
+	/* WIDGET GLOBALS */
+	.widgetcontainer {}
+	.widgettitle {}
+	.widgettitle a {}
+	.widgettitle a:hover {}
+	/* Amagar el widget de cerca a la pàgina 404 */
+	.error404 .widget_search{}
+	.widgetcontainer.widget_search form{}
+	.widgetcontainer.widget_search form#searchform input#s{}
+	.widgetcontainer.widget_search form#searchform{}
+	.widgetcontainer.widget_search form#searchform input#s:focus{}
+	.widgetcontainer.widget_search form#searchform input#searchsubmit{}
+	.widgetcontainer.widget_search form#searchform input#searchsubmit:hover{}
+	.widgetcontainer.widget_search form#searchform input#searchsubmit:active{}
+	/* Widget Categories & Custom Syndication*/
+	.widgetcontainer.widgetcontainer.custom_syndication{}
+	.widgetcontainer.widget_categories ul, .widgetcontainer.custom_syndication ul{}
+	.widgetcontainer.widget_categories ul li, .widgetcontainer.custom_syndication ul li{}
+	.widgetcontainer.widget_categories ul li a, .widgetcontainer.widget_categories ul li a:visited, .widgetcontainer.custom_syndication ul li a, .widgetcontainer.custom_syndication ul li a:visited{}
+	.widgetcontainer.widget_categories ul li a:hover, .widgetcontainer.widget_categories ul li a:active, .widgetcontainer.custom_syndication ul li a:hover, .widgetcontainer.custom_syndication ul li a:active{}
+	.widgetcontainer.widget_categories ul li a i, .widgetcontainer.widget_categories ul li a:visited i, .widgetcontainer.custom_syndication ul li a i, .widgetcontainer.custom_syndication ul li a:visited i{}
+	.widgetcontainer.widget_categories ul li a:hover i, .widgetcontainer.widget_categories ul li a:active i, .widgetcontainer.custom_syndication ul li a:hover i, .widgetcontainer.custom_syndication ul li a:active i{}
+	.widgetcontainer.widget_categories ul li a i.icon-chevron-right, .widgetcontainer.widget_categories ul li a:visited i.icon-chevron-right, .widgetcontainer.custom_syndication ul li a i.icon-chevron-right, 		.widgetcontainer.custom_syndication ul li a:visited i.icon-chevron-right{}
+	.widgetcontainer.widget_categories ul li a:hover i.icon-chevron-right, .widgetcontainer.widget_categories ul li a:active i.icon-chevron-right, .widgetcontainer.custom_syndication ul li a:hover i.icon-chevron-right, .widgetcontainer.custom_syndication ul li a:active i.icon-chevron-right{}
+	.category .widgetcontainer.widget_categories ul li.current-cat a, .category .widgetcontainer.widget_categories ul li.current-cat a:visited{}
+	.category .widgetcontainer.widget_categories ul li.current-cat a i, .category .widgetcontainer.widget_categories ul li.current-cat a:visited i{}
+	.category .widgetcontainer.widget_categories ul li.current-cat a i.icon-chevron-right, .category .widgetcontainer.widget_categories ul li.current-cat a i.icon-chevron-right{}
+	/* Widget Tags*/
+	.widgetcontainer.widget_tag_cloud div{}
+	.widgetcontainer.widget_tag_cloud div a, .widgetcontainer.widget_tag_cloud div a:visited{}
+	.widgetcontainer.widget_tag_cloud div a:hover, .widgetcontainer.widget_tag_cloud div a:active{}
+	/* Widget Share */
+	.widgetcontainer.custom_sharebuttons{padding: .8em 1.6em 1.6em 1.6em;}
+	.widgetcontainer.custom_sharebuttons h1{}
+	.widgetcontainer.custom_sharebuttons a.button{font-size:1.1em;}
+	.widgetcontainer.custom_sharebuttons a.button .fa{}
+	.widgetcontainer.custom_sharebuttons .fa.fr{}
+	.widgetcontainer.custom_sharebuttons a.button:hover{}
+	.widgetcontainer.custom_sharebuttons a.button:hover .fa{}
+	.widgetcontainer.custom_sharebuttons a.button:hover .fa .fr{}
+	.widgetcontainer.custom_sharebuttons a.button:active{}
+	.widgetcontainer.custom_sharebuttons a.button:active .fa{}
+	/* Widget CONTRATACION */
+	.widgetcontainer.custom_contratacion{}
+	.widgetcontainer.custom_contratacion a{padding: .8em 1.6em 1.6em 1.6em;}
+	.widgetcontainer.custom_contratacion img{}
+	.widgetcontainer.custom_contratacion a em{}
+	.widgetcontainer.custom_contratacion a i{}
+	.widgetcontainer.custom_contratacion a span{}
+	.widgetcontainer.custom_contratacion a:hover{}
+	.widgetcontainer.custom_contratacion a:hover img{}
+	.widgetcontainer.custom_contratacion a:hover em{}
+	.widgetcontainer.custom_contratacion a:hover i{}
+	.widgetcontainer.custom_contratacion a:hover span{}
+	/* CSS QTRANSLATE */
+	.qtrans_language_chooser{}
+	.qtrans_language_chooser li{}
+	.qtrans_language_chooser li a, .qtrans_language_chooser li a:visited{}
+	.qtrans_language_chooser li a:hover{}
+	.qtrans_language_chooser li.active a, .qtrans_language_chooser li a:active{}
+	.qtrans_language_chooser li a:active{}
+	/* footer wp ****************************************/
+	/* WIDGET FOOTER */
+	#subsidiary {}
+	#subsidiary #footer-widget {}
+	/* PAGE TEMPLATES  ********************************************************************/
+	.page-template-template-page-fullwidth-php #container {}
+	.page-template-template-page-fullwidth-php #content,.page-template-template-page-fullwidth-php #comments {}
+	/* ATTACHMENT  **********************************************************************/
+	.attachment-jpeg #content,	.attachment-jpeg #container,.attachment-png #content,.attachment-png #container {}
+	.attachment-jpeg .main-aside,.attachment-png .main-aside {}
+	img#wpstats {}
+/**/
+/* Tancament condicional MEDIA QUERY ************************************************************
+*************************************************************************************************/
+}

@@ -1,0 +1,836 @@
+/************************************************************************************************
+SINGLESITE CSS
+*************************************************************************************************/
+/**/
+/* FULLA D'ESTILS IE8 AND BELOW ////////*********************************************************
+*************************************************************************************************/
+/*
+	NOTA: Tested on IE 8! XD
+	Es crida amb condicional desde includes/head.php
+*/
+/* HELPERS ***************************************************************************************
+**************************************************************************************************
+**************************************************************************************************
+**************************************************************************************************
+**************************************************************************************************/
+.lt-ie9 dd {margin: 0 0 0 40px;}
+.lt-ie9 menu, .lt-ie9 ol, .lt-ie9 ul {padding: 0 0 0 40px;}
+/* LAYOU0T COLS **************************************************************/
+/* Columns RAW */
+.lt-ie9 .col_full, .lt-ie9 .col_half, .lt-ie9 .col_third, .lt-ie9 .col_2thirds .col_quarter, .lt-ie9 .col_3quarters{}
+.lt-ie9 .col_full{width:100%;}
+.lt-ie9 .col_half{width:50%;}
+.lt-ie9 .col_third{width:33%;}
+.lt-ie9 .col_2thirds{width:66%;}
+.lt-ie9 .col_quarter{width:25%;}
+.lt-ie9 .col_3quarters{width:75%;}
+/* Columns with Margin -> 1%*/ 
+.lt-ie9 .col_1, .lt-ie9 .col_2-1, .lt-ie9 .col_3-1, .lt-ie9 .col_3-2, .lt-ie9 .col_4-1, .lt-ie9 .col_4-3, .lt-ie9 .col_5-1, .lt-ie9 .col_5-2, .lt-ie9 .col_5-3, .lt-ie9 .col_5-4 {margin:0 0 2% 2%;}
+.lt-ie9 .col_2-1 img, .lt-ie9 .col_3-1 img, .lt-ie9 .col_3-2 img, .lt-ie9 .col_4-1 img, .lt-ie9 .col_4-3 img, .lt-ie9 .col_5-1 img, .lt-ie9 .col_5-2 img, .lt-ie9 .col_5-3 img, .lt-ie9 .col_5-4 img{}
+.lt-ie9 .col_1{width:96%;}
+.lt-ie9 .col_2-1{width:47%;}
+.lt-ie9 .col_3-1{width:30.6%;}
+.lt-ie9 .col_3-2{width:63.3%;}
+.lt-ie9 .col_4-1{width:22.5%;}
+.lt-ie9 .col_4-3{width:71.5%;}
+.lt-ie9 .col_5-1{width:17.6%;}
+.lt-ie9 .col_5-2{width:37.2%;}
+.lt-ie9 .col_5-3{width:56.8%;}
+.lt-ie9 .col_5-4{width:76.4%;}
+/* Reset padding i margin laterals per a cols */
+.lt-ie9 .col_2-1.pl, .lt-ie9 .col_3-1.pl, .lt-ie9 .col_3-2.pl, .lt-ie9 .col_4-1.pl, .lt-ie9 .col_4-2.pl, .lt-ie9 .col_4-3.pl, .lt-ie9 .col_5-1.pl, .lt-ie9 .col_5-2.pl, .lt-ie9 .col_5-3.pl, .lt-ie9 .col_5-4.pl{padding-left:1.5em;}
+.lt-ie9 .col_2-1.pr, .lt-ie9 .col_3-1.pr, .lt-ie9 .col_3-2.pr, .lt-ie9 .col_4-1.pr, .lt-ie9 .col_4-2.pr, .lt-ie9 .col_4-3.pr, .lt-ie9 .col_5-1.pr, .lt-ie9 .col_5-2.pr, .lt-ie9 .col_5-3.pr, .lt-ie9 .col_5-4.pr{padding-right:1.5em;}
+/**/
+/* BOX STYLE ***************************/
+/* Margin -> 1% */
+.lt-ie9 .box{font-size:94%; }
+.lt-ie9 .box header{padding:.6em 2%;} /* Padding = .box section padding / font-size */
+.lt-ie9 .box header h1, .lt-ie9 .box header h2, .lt-ie9 .box header h3, .lt-ie9 .box header h4, .lt-ie9 .box header h5, .lt-ie9 .box header h6{}
+.lt-ie9 .box section{padding:1em 2%}
+/* Box Cols */
+.lt-ie9 .box.col_1 header, .lt-ie9 .box.col_1 section{padding:2%;}
+.lt-ie9 .box.col_2-1 header, .lt-ie9 .box.col_2-1 section{padding:4%;}
+.lt-ie9 .box.col_3-1 header, .lt-ie9 .box.col_3-1 section{padding:6%;}
+.lt-ie9 .box.col_3-2 header, .lt-ie9 .box.col_3-2 section{padding:3%;}
+.lt-ie9 .box.col_4-1 header, .lt-ie9 .box.col_4-1 section{padding:8%;}
+.lt-ie9 .box.col_4-3 header, .lt-ie9 .box.col_4-3 section{padding:2.6%;}
+.lt-ie9 .box.col_5-1 header, .lt-ie9 .box.col_5-1 section{padding:10%;}
+.lt-ie9 .box.col_5-2 header, .lt-ie9 .box.col_5-2 section{padding:5%;}
+.lt-ie9 .box.col_5-3 header, .lt-ie9 .box.col_5-3 section{padding:3.3%;}
+.lt-ie9 .box.col_5-4 header, .lt-ie9 .box.col_5-4 section{padding:2.5%;}
+.lt-ie9 .box.col_1 header, .lt-ie9 .box.col_2-1 header, .lt-ie9 .box.col_3-1 header, .lt-ie9 .box.col_3-2 header, .lt-ie9 .box.col_4-1 header, .lt-ie9 .box.col_4-3 header, .lt-ie9 .box.col_5-1 header, .lt-ie9 .box.col_5-2 header, .lt-ie9 .box.col_5-3 header, .lt-ie9 .box.col_5-4 header{padding-top:1em; padding-bottom:1em;}
+.lt-ie9 .box.col_1 section, .lt-ie9 .box.col_2-1 section, .lt-ie9 .box.col_3-1 section, .lt-ie9 .box.col_3-2 section, .lt-ie9 .box.col_4-1 section, .lt-ie9 .box.col_4-3 section, .lt-ie9 .box.col_5-1 section, .lt-ie9 .box.col_5-2 section, .lt-ie9 .box.col_5-3 section, .lt-ie9 .box.col_5-4 section{padding-top:.6em; padding-bottom:.6em;}
+/* Box Light */
+.lt-ie9 .box-light{}
+.lt-ie9 .box-light header{}
+.lt-ie9 .box-light em, .lt-ie9 .box-light .fa{}
+.lt-ie9 .box-light section{}
+/* Box Success */
+.lt-ie9 .box-success{}
+.lt-ie9 .box-success header{}
+.lt-ie9 .box-success em, .lt-ie9 .box-success .fa{}
+.lt-ie9 .box-success section{}
+/* Box Error */
+.lt-ie9 .box-error{}
+.lt-ie9 .box-error header{}
+.lt-ie9 .box-error em, .lt-ie9 .box-error .fa{}
+.lt-ie9 .box-error section{}
+/* Banner */
+.lt-ie9 .box-banner{}
+.lt-ie9 .box-banner section{margin-left:70px;}
+.lt-ie9 .box-banner section p{}
+.lt-ie9 .box-banner section p em{}
+.lt-ie9 .box-banner section .fa{left:.3em; top:.1em; font-size:56px;}
+/**/
+/* GLOBAL TRICKS */
+.lt-ie9 .fl{}
+.lt-ie9 .fr{}
+.lt-ie9 .fn{}
+.lt-ie9 .clearboth{}
+.lt-ie9 .hidden{}
+.lt-ie9 .nowrap{}
+.lt-ie9 .wrap_content{width:960px;}
+.lt-ie9 .mt{}
+.lt-ie9 .mr{}
+.lt-ie9 .mb{}
+.lt-ie9 .ml{}
+.lt-ie9 .mauto{}
+.lt-ie9 .pt{}
+.lt-ie9 .pr{}
+.lt-ie9 .pb{}
+.lt-ie9 .pl{}
+/* SCREEN TYPE ELEMENTS */
+.lt-ie9 .big_screen{display:inline;}
+.lt-ie9 .small_screen{display:none;}
+.lt-ie9 .phone_screen{display:none;}
+.lt-ie9 .phone_screen_not{display:inline;}
+/**/
+/* FINAL GLOBALS ********************************************************************************/
+/**/
+/* TIPOGRAFIA ************************************************************************************
+**************************************************************************************************
+**************************************************************************************************
+**************************************************************************************************
+**************************************************************************************************
+*/
+/**/
+/* TIPOGRAFIA GLOBAL HTML */
+.lt-ie9 body, .lt-ie9 input, .lt-ie9 textarea {font: 1em/1.625 Sans-Serif;	}
+.lt-ie9 figcaption {} /* Estils pel Fgcaption */
+.lt-ie9 code{}
+.lt-ie9 p code{}
+.lt-ie9 blockquote {padding:.6em 1em; border-left:3px solid #CCC;}
+/* TIPOGRAFIA WORDPRESS*/
+.lt-ie9 h1, .lt-ie9 h2, .lt-ie9 .entry-title, .lt-ie9 h3, .lt-ie9 h4, .lt-ie9 .widgettitle, .lt-ie9 h5, .lt-ie9 h6, .lt-ie9 .page-title {}
+.lt-ie9 .page-title {}
+.lt-ie9 h1 {}
+.lt-ie9 h1.brdr_dwn{ font-size:2em; line-height: 2; text-indent:.2em; margin:0 0 .9em 0;}
+.lt-ie9 h2, .lt-ie9 .entry-title {}
+.lt-ie9 h3 {}
+.lt-ie9 h4, .lt-ie9 .widgettitle {}
+.lt-ie9 h5 {}
+.lt-ie9 h6 {}
+/* LINKS */
+.lt-ie9 a , .lt-ie9 a:visited {}
+.lt-ie9 a:hover , .lt-ie9 a:active{}
+.lt-ie9 a:active{}
+/* BOTONS */
+.lt-ie9 .button{font:normal 85%/1.2 Sans-Serif;}
+.lt-ie9 .button:hover{}
+.lt-ie9 .button-primary{}
+.lt-ie9 .button-primary:hover{}
+/* CalltoAct */
+.lt-ie9 .calltoact{}
+.lt-ie9 .calltoact:hover, .lt-ie9 .calltoact:active{}
+.lt-ie9 .calltoact:active{}
+/* READMORE SECTION */
+.lt-ie9 .wrap_readmore{}
+.lt-ie9 .wrap_readmore .readmore_button{}
+.lt-ie9 .wrap_readmore .readmore_button .readmore{}
+.lt-ie9 .wrap_readmore .readmore_button .readmore:before, .lt-ie9 .wrap_readmore .readmore_button .readmore:after{}
+.lt-ie9 .wrap_readmore .readmore_button .readmore:before{}
+.lt-ie9 .wrap_readmore .readmore_button .readmore:after{}
+.lt-ie9 .wrap_readmore .readmore_button .readmore.readopen:before{}
+.lt-ie9 .wrap_readmore .readmore_button .readmore.readopen:after{}
+.lt-ie9 .wrap_readmore .readmore_content{}
+/* CSS WORDPRESS CHILD THEME**********************************************************************
+**************************************************************************************************
+**************************************************************************************************
+**************************************************************************************************
+**************************************************************************************************
+*/
+/* MEDIA QUERY GLOBAL ****************************************************************************
+*************************************************************************************************/
+/**/  html.lt-ie9 {}
+/**/  .lt-ie9 body {padding-top:83px;} /* Alçada header -> [nav off] - 1px */
+	  /**/.lt-ie9.no-js  body {padding-top:46px;} /* Alçada avís no JS (a 2 linies = 46px) */
+/**/  .lt-ie9 #wrapper{}
+/**/
+/* HEADER ***************************************************************************
+*************************************************************************************/
+/* TO DO: 
+   > MENU ALS MEDIAQUERIES
+*/
+.lt-ie9 #head{height:60px; top:28px;}
+/**/.lt-ie9.no-js #head{} /* avís no JS (a 1 linies = 28px) */
+.lt-ie9 #head #head_wrap { width:960px;}
+/* BRANDING *******************************************/
+/* Menu Button @ 48px */
+.lt-ie9 #branding{position:relative; top:0; left:0;}
+.lt-ie9 #branding-logo{display:block; position:absolute; top:0; left:2%;}
+.lt-ie9 #branding-logo a{}
+/* LOGO */
+.lt-ie9 #branding-logo a img{width:auto; height:54px; padding:3px 10px 0 0; float:left;}
+/* BLOG TITLE */
+.lt-ie9 #branding-logo a #blog-title {float:left; margin: 14px 0 0 0; font-size: 14px; line-height: 18px;}
+.lt-ie9 #branding-logo a #blog-title em {display: block; font-weight:normal; text-align:left; font-size: 12px; line-height: 16px;}
+.lt-ie9 #branding-logo a #blog-title:hover, .lt-ie9 #branding:hover #blog-title {}
+.lt-ie9 #brandin0g-logo a #blog-title:hover em, .lt-ie9 #branding:hover #blog-title em{}
+/* BLOG DESCRIPTION */
+.lt-ie9 #blog-description {}
+/* HEADER WIDGET **************************************/
+.lt-ie9 #header-widget {}
+.lt-ie9 #header-widget .widgetcontainer{}
+.lt-ie9 #header-widget .widgetcontainer ul  {}
+.lt-ie9 #header-widget .widgettitle {}
+.lt-ie9 #header-widget address, .lt-ie9 #header-widget form {}
+/* MULTI-MENU *****************************************/
+/* MENU BUTTON */
+.lt-ie9 .menu-button .menu-title{}
+.lt-ie9 .menu-button {display:none;}
+.lt-ie9 .menu-button:hover, .lt-ie9 .menu-button:active{}
+.lt-ie9 .menu-button .fa{}
+/* WRAPPER MULTIMENU */
+.lt-ie9 #access {display:block;}
+/* MENU LINKS GLOBAL WIDTH*/
+.lt-ie9 .access-nav {box-sizing: border-box;}
+.lt-ie9 .access-nav .menu {}
+.lt-ie9.js .access-nav {}
+.lt-ie9 .access-nav ul {padding:0; margin: 0;  float:right; border-top:none;border-left:1px solid #999;border-bottom:none;border-right:1px solid #FFF; }
+.lt-ie9 .access-nav li {padding:0; float:left; width:auto; border-top:none;border-left:1px solid #FFF;border-bottom:none;border-right:1px solid #999;}
+.lt-ie9 .access-nav li a {text-align:center; font-size: 16px; line-height: 58px; padding:0 .6em; text-shadow:-1px 1px #FFF;background:#dadada;color:#333;}
+.lt-ie9 .access-nav li a:hover {padding:0 .6em; color:#783934; text-decoration:none;background:#f6f6f6;}
+.lt-ie9 .access-nav li.active{}
+.lt-ie9 .access-nav li.active a {background:#f6f6f6;}
+.lt-ie9 .access-nav li.active a:hover {color:#783934;}
+.lt-ie9 .access-nav li:last-child {}
+.lt-ie9 .access-nav li ul {}
+.lt-ie9 .access-nav li.active ul{}
+.lt-ie9 .access-nav li.active ul li{}
+.lt-ie9 .current_page_item a, .lt-ie9 .current_page_item a:visited, .lt-ie9 .current_page_parent a, .lt-ie9 .current_page_parent a:visited{}
+.lt-ie9 .current_page_parent a:hover, .lt-ie9 .current_page_parent a:active{}
+/**/
+/* FOLD *****************************************************************************
+*************************************************************************************/
+.lt-ie9 #fold{}
+/* FLEXSLIDER FOLD ************************************/
+/* TO DO: 
+   > Alçada concreta de slider amb mediaqueries per evitar el salt
+*/
+/* FlexSlider Theme
+*********************************/
+/* Slides */
+.lt-ie9 .flex-container{}
+.lt-ie9 .flex-container ul{padding:0;}
+.lt-ie9 .flexslider {height:350px;}
+.lt-ie9 .flexslider.loading {}
+.lt-ie9 .flexslider .slides > li {height:350px;}
+/* Images */
+.lt-ie9 .flexslider {}
+.lt-ie9 .flexslider .slides .img_cover{}
+.lt-ie9 .flexslider .img_overlay{background: transparent; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#DD783934,endColorstr=#CC783934);}
+.lt-ie9 .flexslider .slides .img_fullback {} /* Posicion imatges TOTES => left:0; top:0; big_screens => width:100%; height: auto; small_screens => width:auto; height: 100%;*/
+/* Control Nav */
+.lt-ie9 .flex-control-nav {}
+.lt-ie9 .flex-control-nav li {}
+.lt-ie9 .flex-control-nav li:first-child {}
+.lt-ie9 .flex-control-nav li:before{}
+.lt-ie9 .flex-control-nav li:hover {}
+.lt-ie9 .flex-control-nav li.active:hover {}
+.lt-ie9 .flex-control-nav li.active:before {}
+/* Direction Nav */
+.lt-ie9 .flex-direction-nav {}
+.lt-ie9 .flex-direction-nav li{}
+.lt-ie9 .flex-direction-nav li a {}
+.lt-ie9 .flex-direction-nav li a:hover {}
+.lt-ie9 .flex-direction-nav li a.disabled {}
+.lt-ie9 .flex-direction-nav li a.prev{}
+.lt-ie9 .flex-direction-nav li a.prev:before {}
+.lt-ie9 .flex-direction-nav li a.next {}
+.lt-ie9 .flex-direction-nav li a.next:after {}
+/* PlayPause */
+.lt-ie9 .flex-pauseplay {}
+.lt-ie9 .flex-pauseplay span{}
+.lt-ie9 .flex-pauseplay span.play:after{}/* ICONO DE PAUSA */
+.lt-ie9 .flex-pauseplay span.pause:after{}/* ICONO DE PLAY */
+/* Caption style */
+.lt-ie9 .flex-caption {}
+.lt-ie9 .flex-caption div {}
+.lt-ie9 .flex-caption div span{}
+.lt-ie9 .flex-caption div span h2 {}
+.lt-ie9 .flex-caption div span h3 {}
+.lt-ie9 .flex-caption div span p {}
+.lt-ie9 .flex-caption div span p.small {}
+.lt-ie9 .flex-caption a, .lt-ie9 .flex-caption a:visited {}
+.lt-ie9 .flex-caption a:hover, .lt-ie9 .flex-caption a:active {}
+.lt-ie9 .flex-caption a.calltoact{}
+.lt-ie9 .flex-caption a:hover, .lt-ie9 .flex-caption a:active {}
+/* Estil compacte */
+.lt-ie9 .flexslider.small {height:90px;}  
+.lt-ie9 .flexslider.small .flex-caption div span{text-align:center;}
+.lt-ie9 .flexslider.small .slides > li {height:90px;}
+.lt-ie9 .flexslider.small .slides .img_fullback {width:100%; height:auto;} /* Posicion imatges TOTES => l eft:0; top:0; big_screens => width:100%; height: auto; small_screens => width:auto; height: 100%;*/
+.lt-ie9 .flexslider.small .flex-caption div {}
+.lt-ie9 .flexslider.small .flex-caption div span h2 {}
+.lt-ie9 .flexslider.small .flex-caption div span h3 {font-size:110%; margin:0; line-height:80px; }
+.lt-ie9 .flexslider.small .flex-caption a, .lt-ie9 .flexslider.small .flex-caption a:visited {}
+/* Single Caption Style */
+.lt-ie9 #singlecaption{z-index:5558;}
+.lt-ie9 #singlecaption p{margin: 40px 0 0 0; font-size:46px; line-height:56px;}
+.lt-ie9 #singlecaption p em{}
+.lt-ie9 #singlecaption h2{font-size:36px;padding:12px 0 16px 0;}
+.lt-ie9 #singlecaption h3{font-size:30px; line-height:48px;}
+.lt-ie9 #singlecaption a{
+		display:block; margin:0 auto;
+		width:36px; height:36px;
+		font-size:20px; line-height:36px;
+		box-shadow:2px 2px 0 #602722, inset 2px 2px 0 #602722;
+		border:1px solid #FFF;
+	}
+.lt-ie9 #singlecaption a span{ position:relative; top:-3px;}
+.lt-ie9 #singlecaption a:hover span{top:0;}
+/* Custom Styles ********************/
+/* Legal */
+.lt-ie9 .flexslider .slides > li.slide_legal {}/* Alçada gran big_screens = height:660px;*/
+.lt-ie9 .slide_legal .flex-caption div {}
+.lt-ie9 .slide_legal .flex-caption div span h3 {}
+/**/
+/* MAIN //***************************************************************************
+*************************************************************************************/
+/**/
+/* MODULO AVISO LEGAL -> ***********************************************************/
+.lt-ie9 #legal_section{}
+.lt-ie9 #legal_section .box section{}
+/* FINAL AVISO LEGAL ***************************************************************/
+/**/
+/* MODULO FORM -> **********************************************************/
+/* TO DO: 
+*/ 
+.lt-ie9 #form_wrap{position:relative;}
+.lt-ie9 #form{ padding-bottom:1em;}
+.lt-ie9 #form ul{ padding:0;}
+.lt-ie9 #form ul li{width:48.1%; float:left; margin-right:2%; z-index:1001;}
+.lt-ie9 #form ul li.form_consulta{float:none;  width:100%; margin-right:0;  z-index:1000;}
+.lt-ie9 #form ul li.form_consulta label, #form ul li.form_consulta textarea{width:49.8%;}
+.lt-ie9 #form ul li.form_consulta textarea{height:7.8em;}
+/*  Form Input Icons */
+.lt-ie9 #form ul li{}
+.lt-ie9 #form ul li:before{}
+.lt-ie9 #form ul li.form_nombre:before{}
+.lt-ie9 #form ul li.form_mail:before{}
+.lt-ie9 #form ul li.form_telf:before{}
+.lt-ie9 #form ul li.form_consulta:before{}
+.lt-ie9 #form ul li.form_honey:before{}
+.lt-ie9 #form ul li.form_bttn:before{}
+/* honeypot */
+.lt-ie9 #form ul li.form_honey{} 
+/* bttn */
+.lt-ie9 #form ul li.form_bttn{width:100%; float:none; margin-right:0; text-align:right; clear:both; font-size:120%;} 
+/* labels and error messages */
+.lt-ie9 #form label{} /*display:block;*/
+.lt-ie9 #form .error label{} 
+.lt-ie9 #form .valid label{} 
+/* Missatge d'error */
+.lt-ie9 #form label span{}
+/* Inputs */
+.lt-ie9 #form input:not(.button){ line-height:1.625;}
+.lt-ie9 #form input:not(.button):focus{}
+/* Validation */
+.lt-ie9 #form .error input{}
+.lt-ie9 #form .valid input{}
+.lt-ie9 #form ul li.error:before{}
+.lt-ie9 #form ul li.valid:before{}
+/*  Form Input Icons */
+.lt-ie9 #form input:not(.button){}
+/*  Form Input Button */
+.lt-ie9 #form ul li.form_bttn input.button{width:20.5%; font-size:100%; margin-right:2%; }
+.lt-ie9 #form ul li.form_bttn input.button:hover{}
+.lt-ie9 #form ul li.form_bttn input.button-primary{}
+.lt-ie9 #form ul li.form_bttn input.button-primary:hover{}
+/* Form Loader */
+.lt-ie9 #form ul li.form_bttn #form_loader{}
+.lt-ie9 #form ul li.form_bttn #form_loader img{}
+/*  Form Input Textarea */
+.lt-ie9 #form textarea{}
+.lt-ie9 #form textarea:focus{}
+/* Form Placeholders */
+.lt-ie9 :-ms-input-placeholder {}
+.lt-ie9 :focus:-ms-input-placeholder{}
+.lt-ie9 .error :-ms-input-placeholder {}
+.lt-ie9 .error :focus:-ms-input-placeholder {}
+.lt-ie9 .error :-ms-input-placeholder {}
+.lt-ie9 .error :focus:-ms-input-placeholder {}
+.lt-ie9 .valid :-ms-input-placeholder {}
+.lt-ie9 .valid :focus:-ms-input-placeholder {}
+.lt-ie9 .valid :-ms-input-placeholder {}
+.lt-ie9 .valid :focus:-ms-input-placeholder {}
+/* Form placeholers js plugin */
+.lt-ie9 .placeholder{}
+.lt-ie9 #form input:focus .placeholder{}
+.lt-ie9 .valid .placeholderFocus{}
+.lt-ie9 .error .placeholderFocus{}
+/* Form Status Messages */
+.lt-ie9 #form_wrap .box{}
+.lt-ie9 #form_wrap .box section{}
+.lt-ie9 #form_wrap .box-success section p{}
+.lt-ie9 #form_wrap .box-error section p{}
+/* Form condicionesd legales */
+.lt-ie9 #form_wrap footer{position:absolute; z-index:7003; left:2%; bottom:0; text-align:left; width:70%; padding:0 0 2em 0;}
+/* FINAL FORM ***************************************************************/
+/**/
+/**/
+/* MODULO GMAPS -> ****************************************************************/
+/* TO DO: 
+   > 3 mides de mapa amb MediaQueries -> .dummy_gmaps
+*/
+.lt-ie9 .maps_responsive{}
+.lt-ie9 .maps_responsive .img_frame{display:block;}
+.lt-ie9 .maps_responsive .container_gmaps {}
+.lt-ie9 .maps_responsive .container_gmaps.loading_maps {}
+/*.lt-ie9 .maps_responsive .dummy_gmaps { padding-top: 20%; }Big Map 5:1 1920x384 */
+/*.lt-ie9 .maps_responsive .dummy_gmaps { padding-top: 40%; }Medium Map 5:2  960x384 */
+.lt-ie9 .maps_responsive .dummy_gmaps { padding-top: 66%; }/*Small Map 3:2 576x384 */ 
+.lt-ie9 .maps_responsive .element_gmaps {}
+.lt-ie9 .maps_responsive .element_gmaps a{}
+.lt-ie9 .maps_responsive .element_gmaps a img {}
+.lt-ie9 .maps_responsive .element_gmaps a img.big_screen {display:none;}
+.lt-ie9 .maps_responsive .element_gmaps a img.mid_screen {display:none;}
+.lt-ie9 .maps_responsive .element_gmaps a img.small_screen {display:block;}
+.lt-ie9 .maps_responsive .element_gmaps iframe{}
+/* FINAL GMAPS ********************************************************************/
+/**/
+/**/
+/* MODULO VIDEO -> ****************************************************************/
+.lt-ie9 .video_responsive{}
+.lt-ie9 .video_responsive .wrap_content{}
+.lt-ie9 .video_responsive .container_video {}
+.lt-ie9 .video_responsive .container_video.loading_video {}
+.lt-ie9 .video_responsive .container_video:after {}
+.lt-ie9 .video_responsive .dummy_video {}
+.lt-ie9 .video_responsive .element_video {}
+.lt-ie9 .video_responsive .element_video a{}
+.lt-ie9 .video_responsive .element_video a img{}
+.lt-ie9 .video_responsive .element_video iframe, .video_responsive div .container_video object, .video_responsive div .container_video embed {}
+/* ESTILOS CONCRETOS */
+.lt-ie9 #video00 .wrap_content{ width:65%;}
+/* FINAL GMAPS ********************************************************************/
+/**/
+/* MODULO GALERÍA COLORBOX -> *****************************************************/
+/* TO DO: 
+   > 
+*/
+/* Layout de la Galeria */
+.lt-ie9 .gallery_module{}
+.lt-ie9 .box section.gallery_module{padding:0 0 .3em 0; margin:0 0 .6em 0;}
+.lt-ie9 .gallery_module div{ padding:0;} 
+.lt-ie9 .gallery_module div a{}
+.lt-ie9 .gallery_module div a{width:22.5%; margin:1% 0 1% 2%;}/* Per media quieries - > Aqui 4 cols // Marge -> 2%*/
+.lt-ie9 .gallery_module div a img{}
+/* Colorbox */
+.lt-ie9 #cboxOverlay{}
+.lt-ie9 #colorbox{}
+.lt-ie9 .cboxIframe{}
+.lt-ie9 #cboxError{}
+.lt-ie9 #cboxLoadingOverlay, .lt-ie9 #cboxLoadingGraphic{}
+/* these elements are buttons, .lt-ie9 and may need to have additional styles reset to avoid unwanted base styles */
+.lt-ie9 #cboxPrevious, .lt-ie9 #cboxNext, .lt-ie9 #cboxSlideshow, .lt-ie9 #cboxClose {}
+/* avoid outlines on :active (mouseclick), .lt-ie9 but preserve outlines on :focus (tabbed navigating) */
+.lt-ie9 #cboxPrevious:active, .lt-ie9 #cboxNext:active, .lt-ie9 #cboxSlideshow:active, .lt-ie9 #cboxClose:active {}
+.lt-ie9 #cboxSlideshow{}
+.lt-ie9 #cboxPrevious, .lt-ie9 #cboxPrevious:visited, .lt-ie9 #cboxNext, .lt-ie9 #cboxNext:visited{width:10%;	height:75%;	top:10%; font-size:2.4em;}
+.lt-ie9 #cboxPrevious:active, .lt-ie9 #cboxPrevious:hover, .lt-ie9 #cboxNext:active, .lt-ie9 #cboxNext:hover{}
+.lt-ie9 #cboxPrevious{left:0; border-right:1px solid #FFF;}
+.lt-ie9 #cboxPrevious:before{}
+.lt-ie9 #cboxNext{right:0;	border-left:1px solid #FFF; }
+.lt-ie9 #cboxNext:after{}
+.lt-ie9 #cboxCurrent{font-size:1.2em;}
+.lt-ie9 #cboxTitle{
+	position:absolute; bottom:0; right:0;
+	display:block; width:100%;	height:15%;
+	border-top:1px solid #555;
+	font-size:1.8em; line-height:2;
+}
+.lt-ie9 #cboxClose, .lt-ie9 #cboxClose:visited{font-size:1.6em;}
+.lt-ie9 #cboxClose:hover, .lt-ie9 #cboxClose:active{}
+.lt-ie9 #cboxClose:after{}
+.lt-ie9 #cboxLoadedContent{ width:80%!important; height:75%!important; position:absolute; top:10%; left:10%;}
+.lt-ie9 .cboxPhoto{max-width:100%;  max-height:100%; width:auto!important; height:auto!important;}
+.lt-ie9 .cboxIframe{width:100%; height:100%; left:0; top:0;}
+/* FINAL GALERIA COLORBOX *********************************************************/
+/**/
+/* MODULO RANDOM HTML -> **********************************************************/
+.lt-ie9 .html_module{}
+.lt-ie9 .html_module .html_img{}
+.lt-ie9 .html_module .img_frame{border:1px solid #999; background:#FFF; padding:9px;}
+/* FINAL RANDOM HTML ***************************************************************/
+/* MODULO TEST COLS -> *************************************************************/
+.lt-ie9 #test_cols article {}
+.lt-ie9 #test_cols article h3{}
+.lt-ie9 #test_cols aside {min-height:130px;}
+.lt-ie9 #test_cols aside.box {min-height:180px;}
+.lt-ie9 #test_cols aside header{}
+.lt-ie9 #test_cols aside section{}
+/* MODULO TIENDA -> ***************************************************************/
+.lt-ie9 #module_tienda{}
+.lt-ie9 #module_tienda .wrap_content{position:relative;}
+.lt-ie9 #module_tienda .col_3-1 {position:absolute; right:0; top:5em;}
+.lt-ie9 #module_tienda .col_3-1 img{max-height:320px;}
+.lt-ie9 #module_tienda .col_3-2{width:63.3%; margin:0 0 1em 0;}
+/* MODULO PROYECTOS -> ************************************************************/
+.lt-ie9 #module_proyectos{}
+.lt-ie9 #module_proyectos .readmore_content{display: inline; float: none; width: 99%;}
+.lt-ie9 #module_proyectos .readmore_button{display:none;}
+/* MODULO EMPRESA -> ************************************************************/
+.lt-ie9 #module_empresa{}
+.lt-ie9 #module_empresa section h2{}
+.lt-ie9 #module_empresa section p{}
+.lt-ie9 #module_empresa .col_half h2{border-bottom:1px solid #333; margin-right:1em; line-height:2; position:relative;}
+.lt-ie9 #module_empresa .col_half h2:after {
+	display: block;position: absolute;bottom: -2px;
+	border-bottom: 1px solid #FFF;
+	content: ""; width: 100%; height: 1px;
+}
+.lt-ie9 #module_empresa ul{}
+.lt-ie9 #module_empresa ul li{}
+.lt-ie9 #module_empresa ul li span.fa{}
+/* MODULO LOCALIZACION -> ************************************************************/
+.lt-ie9 #module_localizacion{}
+.lt-ie9 #module_localizacion article.mod_contact_00{width:22.5%; margin:0 0 0 2%;}
+.lt-ie9 #module_localizacion article.mod_contact_01{width:22.5%; margin:0 0 0 2%;}
+.lt-ie9 #module_localizacion article.mod_contact_02{width:20.5%; margin:0 1.9% 0 0; float:right;}
+.lt-ie9 #module_localizacion article.mod_contact_03{width:49%; margin:0 0 0 2%;}
+.lt-ie9 #module_localizacion article.mod_contact_04{width:71.5%; margin:0 0 2em 2%;}
+/* MODULO CONTACTO -> ************************************************************/
+.lt-ie9 #module_contacto{}
+.lt-ie9 #module_contacto article.mod_contact_00{width:22.5%; margin:0 0 0 2%;}
+.lt-ie9 #module_contacto article.mod_contact_01{width:22.5%; margin:0 0 0 2%;}
+.lt-ie9 #module_contacto article.mod_contact_02{width:20.5%; margin:0 1.9% 0 0; float:right;}
+.lt-ie9 #module_contacto article.mod_contact_03{width:49%; margin:0 0 0 2%;}
+.lt-ie9 #module_contacto article.mod_contact_04{width:71.5%; margin:0 0 2em 2%;}
+/**/
+/* MODULO SOCIALFEED -> ***********************************************************/
+.lt-ie9 #social-feed{}
+.lt-ie9 #social-feed div {}
+.lt-ie9 #social-feed div div{}
+.lt-ie9 #social-feed div div article a.social-feed-loader{width:65%; margin:0 auto;}
+.lt-ie9 #social-feed div div article a.calltoact{ font-size:1.2em;}
+.lt-ie9 #social-feed div div article a.calltoact:hover{}
+.lt-ie9 #social-feed div div article a.calltoact{}
+.lt-ie9 #social-feed div div article a.social-feed-loader{}
+.lt-ie9 #social-feed div div article span.social-feed-loader-js{width:65%; margin:0 auto;}
+.lt-ie9 #fb_feed_loader_html{}
+.lt-ie9 #tw_feed_loader_html{}
+/* FINAL SOCIALFEED ***************************************************************/
+/**/
+/* FOOTER  **********************************************************************/
+.lt-ie9 #footer {}
+/* Tipos Footer */
+.lt-ie9 #footer {}
+.lt-ie9 #footer b, .lt-ie9 #footer em{}
+.lt-ie9 #footer a, .lt-ie9 #footer a:visited{}
+.lt-ie9 #footer a:hover{}
+.lt-ie9 #footer .calltoact{}
+.lt-ie9 #footer .calltoact:hover{}
+/* Globals */
+.lt-ie9 #footer ul{}
+/* LAYOUT FOOTER */
+.lt-ie9 #footer section.wrap_width{}
+.lt-ie9 #footer ul#footer_ul{}
+.lt-ie9 #footer ul#footer_ul > li{float:left; }
+.lt-ie9 #footer ul#footer_ul li#footer_ul_li01{width:50%; float:left; margin:0; padding:.3em 0;}
+.lt-ie9 #footer ul#footer_ul li#footer_ul_li02{}
+.lt-ie9 #footer ul#footer_ul li#footer_ul_li03{width:49%; float:left; margin:0;}
+.lt-ie9 #footer ul#footer_ul li.ul_li-clear{}
+/* SECCION EMPRESA ***************************/
+.lt-ie9 #empresa_datos{}
+.lt-ie9 #empresa_datos b, .lt-ie9 ul#empresa_datos em{}
+.lt-ie9 #empresa_datos a, .lt-ie9 ul#empresa_datos a:visited{}
+.lt-ie9 #empresa_datos a:hover{}
+.lt-ie9 #empresa_datos li{}
+.lt-ie9 #empresa_datos li:first-child{}
+.lt-ie9 #empresa_datos li:last-child{}
+.lt-ie9 #empresa_datos li h1{font-size:120%; }
+.lt-ie9 #empresa_datos li a{}
+.lt-ie9 #empresa_datos li span{}
+.lt-ie9 #empresa_datos li span.fa:before{}
+/* Estils concrets */
+.lt-ie9 #empresa_datos li span.fa-home{}
+.lt-ie9 #empresa_datos li span.fa-fw{}
+/* SECCION SOCIALLINKS + LEGAL ***************************/
+.lt-ie9 #empresa_social_legal{}
+.lt-ie9 #empresa_social_legal b, .lt-ie9 ul#empresa_social_legal em{}
+.lt-ie9 #empresa_social_legal a, .lt-ie9 ul#empresa_social_legal a:visited{}
+.lt-ie9 #empresa_social_legal a:hover{}
+.lt-ie9 #empresa_social_legal>li{}
+.lt-ie9 #empresa_social_legal>li:first-child{}
+.lt-ie9 #empresa_social_legal #sociallinks {}
+.lt-ie9 #empresa_social_legal #sociallinks li a{}
+.lt-ie9 #empresa_social_legal #sociallinks li span.fa{}
+.lt-ie9 #empresa_social_legal #sociallinks li span.fa:before{}
+.lt-ie9 #empresa_social_legal #sociallinks li a:hover{}
+.lt-ie9 #empresa_social_legal #sociallinks li#sociallinks_igr {}/* Estil unic */
+/**/
+/* SECCION SUBFOOTER *********************************/
+.lt-ie9 #subfooter{}
+/* SocialShare *****/
+.lt-ie9 #socialshare{margin:0; width:60%;}
+.lt-ie9 #socialshare li{}
+/*Sharebutton*/
+.lt-ie9 #socialshare #share_bttn {}
+.lt-ie9 #socialshare #share_bttn:hover {}
+.lt-ie9 #socialshare #share_bttn.open, .lt-ie9 #socialshare #share_bttn.open:hover {}
+.lt-ie9 #socialshare #share_bttn.open:active {}
+/*ShareLoaderText*/
+.lt-ie9 #socialshare #share_bttn #share_loader_text{}
+.lt-ie9 #socialshare #share_bttn #share_loader_text .small_screen{ display:none;}
+.lt-ie9 #socialshare #share_bttn #share_loader_text .big_screen{padding:0 .3em 0 0;}
+/*ShareLoaderSpinner*/
+.lt-ie9 #socialshare #share_bttn #share_loader_spinner{}
+.lt-ie9 #socialshare #share_bttn #share_loader_spinner img{}
+/*Share Loader*/
+.lt-ie9 #socialshare #share_bttn #share_loader {}
+.lt-ie9 #socialshare #share_bttn #share_loader span.share_loader_bttn {display: block; float: left; width: auto; height: 30px;}
+.lt-ie9 #socialshare #share_bttn #share_loader span.share_loader_bttn#share_loader_bttn_fb{width: 90px;} /*Individuals*/
+.lt-ie9 #socialshare #share_bttn #share_loader span.share_loader_bttn#share_loader_bttn_fb .fb-share-button{} 
+.lt-ie9 #socialshare #share_bttn #share_loader span.share_loader_bttn .fb_iframe_widget, .lt-ie9 #socialshare #share_bttn #share_loader span.share_loader_bttn .fb_iframe_widget span, .lt-ie9 #socialshare #share_bttn #share_loader span.share_loader_bttn .fb_iframe_widget span iframe[style]{position:relative; top:1px; width:90px!important; height:30px!important;}
+/*Share PHP*/
+.lt-ie9 #socialshare #share_php {float:left; padding-bottom:.3em;}
+.lt-ie9 #socialshare #share_php a{font-size:74%; margin:.3em .3em 0 0;}
+/* BOTO TORNAR A DALT *****/
+.lt-ie9 #totop_wrap{margin:0; width:30%;}
+.lt-ie9 #totop_wrap a#totop, .lt-ie9 #totop_wrap a#totop:visited{ font-size:18px; line-height:30px;}
+.lt-ie9 #totop_wrap a#totop:active, .lt-ie9 #totop_wrap a#totop:hover{}
+/**/
+/* WARNINGS ******************************************/
+.lt-ie9 #warnings{}
+.lt-ie9 #warnings em{}
+.lt-ie9 #warnings article{}
+/* NO-JAVASCRIPT */
+.lt-ie9 #warnings article#nojs_warning{}
+.lt-ie9 #warnings article#nojs_warning a{}
+.lt-ie9 #warnings article#nojs_warning a:hover{}
+/* OLD IE */
+.lt-ie9 #warnings article#oldie_warning{}
+.lt-ie9 #warnings article#oldie_warning a{}
+.lt-ie9 #warnings article#oldie_warning a:hover{}
+/**/
+/* COOKIES ******************************************/
+.lt-ie9 .cookie_spacer{}
+.lt-ie9 #cookie_warning{}
+.lt-ie9 #cookie_warning article{}
+.lt-ie9 #cookie_warning a, .lt-ie9 #cookie_warning span{}
+.lt-ie9 #cookie_warning a:hover, .lt-ie9 #cookie_warning:hover span{}
+/* FINAL FOOTER *******************************************************************/
+/**/
+/* CSS WORDPRESS ******************************************************************/
+/* ********************************************************************************/
+.lt-ie9 #main, .lt-ie9 #main_aside, .lt-ie9 #main_contacto {}
+.lt-ie9 #main_full {}
+.lt-ie9 #container {}
+.lt-ie9 #content {}
+/* CONTENIDOR DE PÀGINES */
+.lt-ie9 #content{}
+.lt-ie9 #content .title-wrap{}
+.lt-ie9 #content .loop_expand_wrap.lastnews_page{}
+.lt-ie9 #content .title-wrap h1, .lt-ie9 #content .title-wrap h2, .lt-ie9 #content .title-wrap h3{}
+.lt-ie9 #content .title-wrap h1 em, .lt-ie9 #content .title-wrap h2 em, .lt-ie9 #content .title-wrap h3 em{}
+.lt-ie9 #content .title-wrap .icon-wrap{}
+.lt-ie9 #content .title-wrap a, .lt-ie9 #content .title-wrap a:visited{}
+.lt-ie9 #content .title-wrap a:hover, .lt-ie9 #content .title-wrap a:active{}
+.lt-ie9 #content .title-wrap a:active{}
+/* CONETINDOR del POST */
+/* ENTRY TITLE + CAT ICON*/
+.lt-ie9 article.post .entry-title.post_section, .lt-ie9 article .page .entry-title.post_section{}
+.lt-ie9 .entry-title.post_section a, .lt-ie9 .entry-title.post_section a:visited{}
+.lt-ie9 .entry-title.post_section a:hover, .lt-ie9 .entry-title.post_section a:active{}
+.lt-ie9 .entry-title.post_section a:active{}
+/* ENTRY IMATGE DESTACADA*/
+.lt-ie9 .entry-content .entry-thumb{}
+.lt-ie9 .entry-content .entry-thumb img{}
+/* CONTENIDO CONTINGUT*/
+.lt-ie9 #content .attachment {}
+.lt-ie9 .entry-content{}
+.lt-ie9 .entry-content .entry-wysiwyg a, .lt-ie9 .entry-content .entry-wysiwyg a:visited, .lt-ie9 .entry-content .entry-wysiwyg li a, .lt-ie9 .entry-content .entry-wysiwyg li a:visited{}
+.lt-ie9 .entry-content .entry-wysiwyg a:hover, .lt-ie9 .entry-content .entry-wysiwyg a:active, .lt-ie9 .entry-content .entry-wysiwyg li a:hover, .lt-ie9 .entry-content .entry-wysiwyg li a:active{}
+.lt-ie9 .entry-content .entry-excerpt h4{}
+.lt-ie9 .entry-content .entry-wysiwyg h1, .lt-ie9 .entry-content .entry-wysiwyg h2, .lt-ie9 .entry-content .entry-wysiwyg h3, .lt-ie9 .entry-content .entry-wysiwyg h4, .lt-ie9 .entry-content .entry-wysiwyg h5, .lt-ie9 .entry-content .entry-wysiwyg h a{}
+.lt-ie9 .entry-content .entry-wysiwyg h1 a, .lt-ie9 .entry-content .entry-wysiwyg h2 a, .lt-ie9 .entry-content .entry-wysiwyg h3 a, .lt-ie9 .entry-content .entry-wysiwyg h4 a, .lt-ie9 .entry-content .entry-wysiwyg h5 a{}
+.lt-ie9 .entry-content .entry-wysiwyg h6, .lt-ie9 .entry-content .entry-wysiwyg h6 a{}
+.lt-ie9 .entry-content .entry-wysiwyg p{}
+.lt-ie9 .entry-content .entry-wysiwyg b, .lt-ie9 .entry-content .entry-wysiwyg em, .lt-ie9 .entry-content .entry-wysiwyg strong{}
+.lt-ie9 .entry-content .entry-wysiwyg em strong{}
+.lt-ie9 .entry-content .entry-wysiwyg p a{}
+.lt-ie9 .entry-content .entry-wysiwyg ul, .lt-ie9 .entry-content .entry-wysiwyg ol{}
+.lt-ie9 .entry-content .entry-wysiwyg ul{}
+.lt-ie9 .entry-content .entry-wysiwyg ol{}
+/* PAGE TITLES */
+.lt-ie9 .page-title span span {}
+.lt-ie9 .page-title .meta-nav {}
+/* PAGE HEAD */
+.lt-ie9 .hentry {}
+/* STICKY POSTS */
+.lt-ie9 .sticky {}
+/* ENTRY TAGS */
+.lt-ie9 .entry-title a {}
+.lt-ie9 .entry-title a:hover {}
+.lt-ie9 .entry-meta {}
+.lt-ie9 .entry-meta a {}
+.lt-ie9 .entry-meta a:hover {}
+.lt-ie9 .entry-meta abbr {}
+.lt-ie9 .entry-utility {}
+.lt-ie9 .attach_content .entry-utility {}
+.lt-ie9 .entry-utility a {}
+.lt-ie9 .entry-utility a:hover {}
+.lt-ie9 .entry-utility ul {}
+.lt-ie9 .entry-utility li {}
+.lt-ie9 .entry-utility li i{}
+.lt-ie9 .entry-utility li a{}
+.lt-ie9 .entry-utility li a:hover{}
+.lt-ie9 .edit-link {}
+.lt-ie9 .content-column {}
+.lt-ie9 nav.navigation {}
+/* LINKS PAGE */
+.lt-ie9 #links-page, .lt-ie9 #archives-page {}
+/* AUTOR INFO*/
+.lt-ie9 #author-info {}
+.lt-ie9 #author-info .avatar {}
+/* ENTRY IMAGES*/
+.lt-ie9 .entry-content .wp-post-image {}
+.lt-ie9 .entry-content img {}
+.lt-ie9 .alignleft, .lt-ie9 	img.alignleft {}
+.lt-ie9 .alignright, .lt-ie9 img.alignright {}
+.lt-ie9 .aligncenter, .lt-ie9 img.aligncenter {}
+.lt-ie9 .wp-caption {}
+.lt-ie9 .wp-caption img {}
+.lt-ie9 .entry-content .wp-caption a img, .lt-ie9 .entry-content .wp-caption a:visited img {}
+.lt-ie9 .entry-content .wp-caption a:hover img {}
+.lt-ie9 .entry-content .wp-caption a:active img {}
+.lt-ie9 .wp-caption p.wp-caption-text {}
+.lt-ie9 .entry-content a img {}
+.lt-ie9 .entry-content a:hover img {}
+.lt-ie9 .entry-content a:active img {}
+/* GALLERY ENTRY*/
+.lt-ie9 .gallery {}
+.lt-ie9 .gallery .gallery-row {}
+.lt-ie9 .gallery .gallery-item {}
+.lt-ie9 .gallery .gallery-item a{}
+.lt-ie9 .gallery .gallery-item a img, .lt-ie9 .gallery .gallery-item img {}
+.lt-ie9 .gallery .gallery-item a:hover img, .lt-ie9 .gallery .gallery-item:hover img {}
+.lt-ie9 .gallery .gallery-item a:active img, .lt-ie9 .gallery .gallery-item:active img {}
+.lt-ie9 .gallery-icon {}
+.lt-ie9 .gallery-caption {}
+/* COMMENTS */
+.lt-ie9 .wp-smiley {}
+.lt-ie9 #comments {}
+.lt-ie9 #comments ol {}
+.lt-ie9 #comments-list ul {}
+.lt-ie9 #comments-list ul li {}
+.lt-ie9 #comments-list ol {}
+.lt-ie9 #comments-list li {}
+.lt-ie9 #comments-list li .avatar {}
+.lt-ie9 #comments-list li.bypostauthor {}
+.lt-ie9 #comments-list .thread-odd {}
+.lt-ie9 #comments-list .comment-author {}
+.lt-ie9 #comments-list .comment-meta {}
+.lt-ie9 #comments-list #respond {}
+.lt-ie9 #comments-list ul #respond {}
+.lt-ie9 .comment-reply-link {}
+.lt-ie9 #trackbacks-list .comment-content {}
+.lt-ie9 #respond {}
+.lt-ie9 #cancel-comment-reply {}
+/* COMMENTS FORM */
+.lt-ie9 .form-section input {}
+.lt-ie9 .form-section textarea {}
+.lt-ie9 #form-allowed-tags {}
+.lt-ie9 #form-allowed-tags p {}
+.lt-ie9 #form-allowed-tags span {}
+.lt-ie9 .form-submit {}
+.lt-ie9 .button, .lt-ie9 input[type="submit"] {}
+.lt-ie9 .button:hover, .lt-ie9 input[type="submit"]:hover {}
+/* COMMENTS LIST */
+.lt-ie9 .page-link, .lt-ie9 	.comment-navigation {}
+.lt-ie9 .page-link a, .lt-ie9 .comment-navigation a {}
+.lt-ie9 .page-link a:hover, .lt-ie9 	.comment-navigation a:hover {}
+.lt-ie9 .page-link a, .lt-ie9 .page-link span, .lt-ie9 .comment-navigation a, .lt-ie9 	.comment-navigation span {}
+.lt-ie9 .paginated-comments-links {}
+/* ASIDE / LATERAL  **********************************************************************/
+.lt-ie9 #content .aside {}
+.lt-ie9 .aside {}
+.lt-ie9 .aside a, .lt-ie9 .aside a:visited{}
+.lt-ie9 .aside a:hover, .lt-ie9 .aside a:active{}
+.lt-ie9 .aside ul, .lt-ie9 .aside section {}
+.lt-ie9 .aside ul ul, .lt-ie9 .aside section ul {}
+.lt-ie9 .aside ul ul li, .lt-ie9 .aside section ul li {}
+.lt-ie9 .aside ul ul ul, .lt-ie9 .aside section ul ul {}
+.lt-ie9 .aside img {}
+.lt-ie9 .aside table {}
+.lt-ie9 .aside thead, .lt-ie9 .aside tbody {}
+.lt-ie9 .aside th, .lt-ie9 .aside td {}
+.lt-ie9 .aside tfoot tr {}
+.lt-ie9 .aside tfoot td {}
+.lt-ie9 .aside #searchform input {}
+/* TAG CLOUD */
+.lt-ie9 .widget_tag_cloud {}
+/* SEARCH */
+.lt-ie9 #searchsubmit {}
+/* WIDGET PRIMARY */
+.lt-ie9 #primary {}
+/* WIDGET GLOBALS */
+.lt-ie9 .widgetcontainer {}
+.lt-ie9 .widgettitle {}
+.lt-ie9 .widgettitle a {}
+.lt-ie9 .widgettitle a:hover {}
+/* Amagar el widget de cerca a la pàgina 404 */
+.lt-ie9 .error404 .widget_search{}
+.lt-ie9 .widgetcontainer.widget_search form{}
+.lt-ie9 .widgetcontainer.widget_search form#searchform input#s{}
+.lt-ie9 .widgetcontainer.widget_search form#searchform{}
+.lt-ie9 .widgetcontainer.widget_search form#searchform input#s:focus{}
+.lt-ie9 .widgetcontainer.widget_search form#searchform input#searchsubmit{}
+.lt-ie9 .widgetcontainer.widget_search form#searchform input#searchsubmit:hover{}
+.lt-ie9 .widgetcontainer.widget_search form#searchform input#searchsubmit:active{}
+/* Widget Categories & Custom Syndication*/
+.lt-ie9 .widgetcontainer.widgetcontainer.custom_syndication{}
+.lt-ie9 .widgetcontainer.widget_categories ul, .lt-ie9 .widgetcontainer.custom_syndication ul{}
+.lt-ie9 .widgetcontainer.widget_categories ul li, .lt-ie9 .widgetcontainer.custom_syndication ul li{}
+.lt-ie9 .lt-ie9 .widgetcontainer.widget_categories ul li a, .lt-ie9 .widgetcontainer.widget_categories ul li a:visited, .lt-ie9 .widgetcontainer.custom_syndication ul li a, .lt-ie9 .widgetcontainer.custom_syndication ul li a:visited{}
+.lt-ie9 .widgetcontainer.widget_categories ul li a:hover, .lt-ie9 .widgetcontainer.widget_categories ul li a:active, .lt-ie9 .widgetcontainer.custom_syndication ul li a:hover, .lt-ie9 .widgetcontainer.custom_syndication ul li a:active{}
+.lt-ie9 .widgetcontainer.widget_categories ul li a i, .lt-ie9 .widgetcontainer.widget_categories ul li a:visited i, .lt-ie9 .widgetcontainer.custom_syndication ul li a i, .lt-ie9 .widgetcontainer.custom_syndication ul li a:visited i{}
+.lt-ie9 .widgetcontainer.widget_categories ul li a:hover i, .lt-ie9 .widgetcontainer.widget_categories ul li a:active i, .lt-ie9 .widgetcontainer.custom_syndication ul li a:hover i, .lt-ie9 .widgetcontainer.custom_syndication ul li a:active i{}
+.lt-ie9 .widgetcontainer.widget_categories ul li a i.icon-chevron-right, .lt-ie9 .widgetcontainer.widget_categories ul li a:visited i.icon-chevron-right, .lt-ie9 .widgetcontainer.custom_syndication ul li a i.icon-chevron-right, .lt-ie9 		.widgetcontainer.custom_syndication ul li a:visited i.icon-chevron-right{}
+.lt-ie9 .widgetcontainer.widget_categories ul li a:hover i.icon-chevron-right, .lt-ie9 .widgetcontainer.widget_categories ul li a:active i.icon-chevron-right, .lt-ie9 .widgetcontainer.custom_syndication ul li a:hover i.icon-chevron-right, .lt-ie9 .widgetcontainer.custom_syndication ul li a:active i.icon-chevron-right{}
+.lt-ie9 .category .widgetcontainer.widget_categories ul li.current-cat a, .lt-ie9 .category .widgetcontainer.widget_categories ul li.current-cat a:visited{}
+.lt-ie9 .category .widgetcontainer.widget_categories ul li.current-cat a i, .lt-ie9 .category .widgetcontainer.widget_categories ul li.current-cat a:visited i{}
+.lt-ie9 .category .widgetcontainer.widget_categories ul li.current-cat a i.icon-chevron-right, .lt-ie9 .category .widgetcontainer.widget_categories ul li.current-cat a i.icon-chevron-right{}
+/* Widget Tags*/
+.lt-ie9 .widgetcontainer.widget_tag_cloud div{}
+.lt-ie9 .widgetcontainer.widget_tag_cloud div a, .lt-ie9 .widgetcontainer.widget_tag_cloud div a:visited{}
+.lt-ie9 .widgetcontainer.widget_tag_cloud div a:hover, .lt-ie9 .widgetcontainer.widget_tag_cloud div a:active{}
+/* CSS QTRANSLATE */
+.lt-ie9 .qtrans_language_chooser{}
+.lt-ie9 .qtrans_language_chooser li{}
+.lt-ie9 .qtrans_language_chooser li a, .lt-ie9 .qtrans_language_chooser li a:visited{}
+.lt-ie9 .qtrans_language_chooser li a:hover{}
+.lt-ie9 .qtrans_language_chooser li.active a, .lt-ie9 .qtrans_language_chooser li a:active{}
+.lt-ie9 .qtrans_language_chooser li a:active{}
+/* footer wp ****************************************/
+/* WIDGET FOOTER */
+.lt-ie9 #subsidiary {}
+.lt-ie9 #subsidiary #footer-widget {}
+/* PAGE TEMPLATES  ********************************************************************/
+.lt-ie9 .page-template-template-page-fullwidth-php #container {}
+.lt-ie9 .page-template-template-page-fullwidth-php #content, .lt-ie9 .page-template-template-page-fullwidth-php #comments {}
+/* ATTACHMENT  **********************************************************************/
+.lt-ie9 .attachment-jpeg #content, .lt-ie9 	.attachment-jpeg #container, .lt-ie9 .attachment-png #content, .lt-ie9 .attachment-png #container {}
+.lt-ie9 .attachment-jpeg .main-aside, .lt-ie9 .attachment-png .main-aside {}
+.lt-ie9 img#wpstats {}

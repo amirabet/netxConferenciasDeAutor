@@ -1,0 +1,44 @@
+/* WIDGETS ESCRIPTORI (ACCESSOS DIRECTES) ************************************************************
+******************************************************************************************************/
+/*FORMAT DEL WIDGET*/
+.wp-admin .inside a.wdgt_dash{	overflow: hidden; display:block; padding: 0 12px 12px;	text-align: center; color: #999; font-size: 16px;line-height: 1.5; margin:0; text-align:center; cursor:pointer;}
+.wp-admin .inside a.wdgt_dash b{ font-weight:400;  margin:1em 0 0 0;}
+.wp-admin .inside a.wdgt_dash b:before{ font: 400 120px/1 dashicons; speak: none; display: block; margin: 0 5px 20px 0; padding: 0; text-indent: 0; text-align: center; position: relative; webkit-font-smoothing: antialiased; text-decoration: none!important; content: "\f111";}
+.wp-admin .inside a.wdgt_dash:hover b{ color:#444;}
+.wp-admin .inside a.wdgt_dash:hover b:before{ color:#048f3e;}
+@media only screen and (max-width: 482px) {
+	.wp-admin .inside a.wdgt_dash b:before{font-size: 45px;}
+}
+@media only screen and (min-width: 483px) and (max-width: 782px) {
+	.wp-admin .inside a.wdgt_dash b:before{font-size: 90px;}
+}
+/*ICONES PER CADA WIDGET*/
+.wp-admin .inside a.wdgt_dash.wdgt_stats b:before{ content: "\f239";}
+/* Estils per la Pàgina d'Estadístiques (gràfics) */
+.toplevel_page_stats #dashboard-widgets .meta-box-sortables {min-height: 35px;}
+.toplevel_page_stats .metabox-holder .postbox-container .empty-container {border: 1px dashed #BBB; height: 35px;}
+.postbox_single{ width:94%; max-width:280px; float:left; margin:8px;}
+.postbox_double{ width:94%; max-width:578px; float:left; margin:8px;}
+.no-widget .postbox.postbox_single h3, .no-widget .postbox.postbox_double h3{ cursor:default;!important}
+.analytics_results_bigdata{ display:block; width:100%; text-align:center; font-size:6em; color:#777; line-height:1.4; font-weight:300;}
+.analytics_results_bigdata em{ font-size:80%; font-style:normal;  font-weight:300;}
+.analytics_results_bigdata i{ font-size:33%; font-style:normal;  font-weight:400;}
+.analytics_results_bigdata span{font-size:90%;}
+.analytics_results_bigdata span i{}
+.analytics_results_bigdata span .device{display:block; float:left; margin-bottom:.6em; font-size:65%; position:relative; top:.3em;}
+.analytics_results_bigdata span .device div.dashicons{ font-size:160%; width:auto; height:auto; color:#DDD; display:block;}
+.analytics_results_bigdata span .device b{ display: block; font-size:35%; font-style:normal; font-weight:400;}
+.analytics_results_smalldata{ display:block; position:relative; top:.6em; width:100%; border-top:1px solid #DDD; text-align:right; line-height:2; font-size:1.2em; font-weight:600; color:#888;}
+.analytics_results_smalldata .text_data{ position:absolute; left:0; top:.2em; color:#888; }
+.analytics_results_smalldata .rating_data{ position:absolute; left:0; top:.4em; color:#888;}
+.analytics_results_smalldata i{ font-size:85%; font-style:normal;  font-weight:400;}
+.analytics_results_smalldata.red{color:#ed8585;}
+.analytics_results_smalldata.red:before{content: "\f140"; font-family: "dashicons";}
+.analytics_results_smalldata.green{color:#74cd48;}
+.analytics_results_smalldata.green:before{content: "\f142"; font-family: "dashicons";}
+.analytics_results_tb, .analytics_results_tb tr, .analytics_results_tb tr td { border-collapse: collapse; width:100%;}
+.analytics_results_tb tr:nth-child(odd){ background-color:#EEE;}
+.analytics_results_tb tr td:nth-child(odd){ padding:4px 0 4px 4px;}
+.analytics_results_tb tr td:nth-child(even){ text-align:right; padding:4px 4px;}
+.analytics_results_tb tr td a { text-decoration:none;}
+

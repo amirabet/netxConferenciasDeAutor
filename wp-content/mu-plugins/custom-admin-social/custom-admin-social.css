@@ -1,0 +1,30 @@
+/* WIDGETS ESCRIPTORI (ACCESSOS DIRECTES) ************************************************************
+******************************************************************************************************/
+/*FORMAT DEL WIDGET*/
+.wp-admin .inside a.wdgt_dash{	overflow: hidden; display:block; padding: 0 12px 12px;	text-align: center; color: #999; font-size: 16px;line-height: 1.5; margin:0; text-align:center; cursor:pointer;}
+.wp-admin .inside a.wdgt_dash b{ font-weight:400;  margin:1em 0 0 0;}
+.wp-admin .inside a.wdgt_dash b:before{ font: 400 120px/1 dashicons; speak: none; display: block; margin: 0 5px 20px 0; padding: 0; text-indent: 0; text-align: center; position: relative; webkit-font-smoothing: antialiased; text-decoration: none!important; content: "\f111";}
+.wp-admin .inside a.wdgt_dash:hover b{ color:#444;}
+.wp-admin .inside a.wdgt_dash:hover b:before{ color:#048f3e;}
+@media only screen and (max-width: 482px) {
+	.wp-admin .inside a.wdgt_dash b:before{font-size: 45px;}
+}
+@media only screen and (min-width: 483px) and (max-width: 782px) {
+	.wp-admin .inside a.wdgt_dash b:before{font-size: 90px;}
+}
+/*ICONES PER CADA WIDGET*/
+.wp-admin .inside a.wdgt_dash.wdgt_social b:before{ content: "\f301";}
+/* WIDGETS SOCIAL *************************************************************************************
+******************************************************************************************************/
+.inside span.inside_wdgt {margin:0 auto; display:block; text-align:center;}
+.inside p {word-wrap: break-word; text-align:left;}
+.inside ul li {text-align:left;}
+.inside .notice {border-left: 4px solid #c4d03a; padding: 1px 12px; background-color: #fdffe3; -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1); box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);}
+.inside .notice_error {border-left: 4px solid #d03a3a; padding: 1px 12px; background-color: #ffe3e3; -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1); box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);}
+.repeatable-hide{opacity:0; cursor:default!important; z-index:-9999; position:relative; left:-9999;}
+body.toplevel_page_reader, body.toplevel_page_social{ background:url(loader.gif) no-repeat 99% 1%;}
+body.toplevel_page_reader #contextual-help-link-wrap, body.toplevel_page_social #contextual-help-link-wrap{ display: none !important; }
+#ig_render { display:block; width:280px; margin:0 auto;}
+#ig_render .instagram-placeholder{width:90px; margin-left:3px; float:left;}
+#ig_render .instagram-placeholder a{display:block;}
+#ig_render .instagram-placeholder a img{width:90px; height:auto;}

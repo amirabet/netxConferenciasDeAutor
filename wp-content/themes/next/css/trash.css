@@ -1,0 +1,55 @@
+/* Widget Share */
+.widgetcontainer.custom_sharebuttons{padding: 1.8em 4em 2em 2em; text-align:left; }
+.widgetcontainer.custom_sharebuttons h1{margin-right:2%; border-bottom-width:1px;}
+.widgetcontainer.custom_sharebuttons a.button{
+	width:23%;
+	font-size:1.2em;
+	padding: 0 0 0 1em; margin:0 2% .5em 0;
+	text-transform: none;
+	line-height:2.4;
+	text-indent:-9999em;
+}
+.widgetcontainer.custom_sharebuttons a.button .fa{
+	padding-right:1em; margin-right:0;
+	line-height:2.4;
+	width: 100%;
+	text-indent:0em;
+	border: none;
+	box-shadow: none;
+}
+.widgetcontainer.custom_sharebuttons .fa.fr{
+	padding-right:0; margin-right:0;
+	padding-left:1em; margin-left:0;
+	line-height:2.4;
+}
+.widgetcontainer.custom_sharebuttons a.button:hover{
+	border-color:#444; color: #FFF;  
+	background:#048F3E;
+	box-shadow: inset 2px 2px 0 rgba(255, 255, 255, 0.5), 2px 2px 0 rgba(0, 0, 0, 0.3);
+}
+.widgetcontainer.custom_sharebuttons a.button:hover .fa{
+	border-color:#555;
+	box-shadow: 2px 0 0 rgba(255, 255, 255, 0.3);
+	transition-property: none;
+	border: none;
+	box-shadow: none;
+}
+.widgetcontainer.custom_sharebuttons a.button:hover .fa .fr{
+	border-right:none;
+	border-left-width:1px;	
+	border-left-style:solid;
+	border: none;
+	box-shadow: none;
+}
+
+.widgetcontainer.custom_sharebuttons a.button:active{
+	border-top-color:#444;border-left-color:#444;
+	color: #EEE;
+	box-shadow: inset 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+.widgetcontainer.custom_sharebuttons a.button:active .fa{}
+/* TODO: Universalitzar aquest model de colors */
+.widgetcontainer.custom_sharebuttons a.button.button_social_fb:hover{background-color:#3b5998;}
+.widgetcontainer.custom_sharebuttons a.button.button_social_tw:hover{background-color:#00aced;}
+.widgetcontainer.custom_sharebuttons a.button.button_social_li:hover{background-color:#007bb6;}
+.widgetcontainer.custom_sharebuttons a.button.button_social_gp:hover{background-color:#dd4b39;}
