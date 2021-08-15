@@ -1,4 +1,4 @@
-![alt text](https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/1f31cb125202285.61141aa315f97.jpg "NEXT Conferencias de Autor")
+![alt text](https://repository-images.githubusercontent.com/396032141/34dbddec-b655-48f4-b210-e8470c0ced90 "NEXT Conferencias de Autor")
 
 # NEXT Conferencias de Autor
 ## WordPress para NEXT Conferencias de Autor
